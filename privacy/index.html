@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — MACONA</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="MACONA's privacy policy — how we handle your information.">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .nav { background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .nav-links .nav-donate { background: var(--accent); color: #fff !important; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 600; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); flex-direction: column; padding: 1rem 1.5rem; gap: 0.75rem; }
+      .nav-links.open { display: flex; }
+    }
+    .hero { text-align: center; padding: 4rem 1.5rem 2.5rem; background: linear-gradient(180deg, var(--accent-glow) 0%, var(--bg) 100%); }
+    .hero h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1rem; color: var(--text-muted); }
+    .content { max-width: 780px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .content h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--text); }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+    .content ul { margin: 0 0 1rem 1.5rem; color: var(--text-muted); }
+    .content ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .footer { background: var(--text); color: #ccc; text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+    .footer a { color: #d4a373; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; list-style: none; }
+    .footer-links a { color: #ddd; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/donate/" class="nav-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: March 27, 2026</p>
+  </header>
+
+  <main class="content">
+
+    <h2>Overview</h2>
+    <p>Mimi African Charities of North America ("MACONA", "we", "us", or "our") is committed to protecting the privacy of our donors, volunteers, and website visitors. This Privacy Policy describes how we collect, use, and safeguard your information when you visit macona.org or make a donation.</p>
+
+    <h2>Information We Collect</h2>
+    <p>Our website is a static site that does not use cookies, tracking pixels, or analytics software. We collect information only when you voluntarily provide it:</p>
+    <ul>
+      <li><strong>Donations:</strong> When you make a donation through our Stripe-powered payment page, Stripe collects your name, email address, and payment information. MACONA does not store your credit card or bank account details — all payment processing is handled by <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a>.</li>
+      <li><strong>Email contact:</strong> If you email us at <a href="mailto:contact@macona.org">contact@macona.org</a> or <a href="mailto:donate@macona.org">donate@macona.org</a>, we receive your email address and message content.</li>
+      <li><strong>Volunteer inquiries:</strong> If you contact us about volunteering, we collect the information you provide (name, email, areas of interest).</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>Processing and acknowledging your donations</li>
+      <li>Sending tax receipts for charitable contributions</li>
+      <li>Responding to your inquiries and requests</li>
+      <li>Communicating about MACONA programs and campaigns (only if you opt in)</li>
+      <li>Complying with legal and regulatory requirements</li>
+    </ul>
+
+    <h2>Information Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p>
+    <ul>
+      <li><strong>Stripe:</strong> Our payment processor, which handles all donation transactions under their own <a href="https://stripe.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</li>
+      <li><strong>Brevo:</strong> Our email communications platform, used to send donation receipts and updates you have opted into.</li>
+      <li><strong>Legal requirements:</strong> When required by law, subpoena, or government request.</li>
+    </ul>
+
+    <h2>Data Security</h2>
+    <p>We take reasonable measures to protect your information. All donation transactions are processed through Stripe's PCI-compliant payment infrastructure. Our website is served over HTTPS with TLS encryption.</p>
+
+    <h2>Your Rights</h2>
+    <p>You may:</p>
+    <ul>
+      <li>Request a copy of the personal information we hold about you</li>
+      <li>Request correction or deletion of your personal information</li>
+      <li>Opt out of any email communications at any time</li>
+      <li>Request that we stop processing your information</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:donate@macona.org">donate@macona.org</a>.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Our website is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, contact us at:</p>
+    <p>
+      MACONA — Mimi African Charities of North America<br>
+      7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723<br>
+      Email: <a href="mailto:donate@macona.org">donate@macona.org</a><br>
+      Phone: 301-356-2107
+    </p>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/programs/">Programs</a></li>
+      <li><a href="/donate/">Donate</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/terms/">Terms</a></li>
+    </ul>
+    <p>&copy; 2026 Mimi African Charities of North America (MACONA). EIN: 93-3813688.</p>
+  </footer>
+
+</body>
+</html>

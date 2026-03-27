@@ -17,6 +17,8 @@ PAGES = [
     "/blog/your-next-hire-ai/",
     "/blog/spring-campaign/",
     "/contact/",
+    "/privacy/",
+    "/terms/",
 ]
 
 def check_page(url: str) -> bool:
