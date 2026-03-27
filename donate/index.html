@@ -447,6 +447,12 @@
     <p>Together we can build a world where all youth are cared for, safe, and never go to bed hungry.</p>
   </section>
 
+  <!-- Thank You Banner (shown after Stripe redirect) -->
+  <div id="thank-you" style="display:none; background:#2d6a4f; color:#fff; text-align:center; padding:2rem 1.5rem;">
+    <h2 style="font-size:1.5rem; margin-bottom:0.5rem;">Thank You for Your Generous Donation!</h2>
+    <p style="max-width:600px; margin:0 auto; font-size:1.05rem; opacity:0.95;">Your support helps MACONA provide relief for children and women in Africa and the Greater Baltimore Area. A receipt has been sent to your email.</p>
+  </div>
+
   <!-- Impact Banner -->
   <div class="impact-banner">
     <p>MACONA is 100% volunteer-run. Every dollar goes directly to programs &mdash; clothing drives, international shipments, food distribution, education, and healthcare for children and women in Africa and the Greater Baltimore Area.</p>
@@ -457,32 +463,32 @@
     <h2 class="section-title">Choose Your Impact</h2>
     <div class="donate-grid">
 
-      <a href="#stripe-link-pending" class="donate-card">
+      <a href="https://buy.stripe.com/28E28r5pU3GR7Nr45ngjC01" class="donate-card" target="_blank" rel="noopener">
         <div class="donate-amount">$25</div>
         <div class="donate-label">Supply a Child</div>
         <div class="donate-desc">Provides clothing and school supplies for children in need</div>
         <span class="donate-btn">Donate $25</span>
       </a>
 
-      <a href="#stripe-link-pending" class="donate-card">
+      <a href="https://buy.stripe.com/fZu3cvg4yfpzebP6dvgjC02" class="donate-card" target="_blank" rel="noopener">
         <div class="donate-amount">$50</div>
         <div class="donate-label">Feed a Family</div>
         <div class="donate-desc">Supports food distribution in the Greater Baltimore Area</div>
         <span class="donate-btn">Donate $50</span>
       </a>
 
-      <a href="#stripe-link-pending" class="donate-card">
+      <a href="https://buy.stripe.com/dRmfZh5pU4KV7Nr8lDgjC03" class="donate-card" target="_blank" rel="noopener">
         <div class="donate-amount">$100</div>
         <div class="donate-label">Ship Supplies</div>
         <div class="donate-desc">Helps fund tracked container shipments to Dakar, Senegal</div>
         <span class="donate-btn">Donate $100</span>
       </a>
 
-      <a href="#stripe-link-pending" class="donate-card">
-        <div class="donate-amount" style="font-size: 2rem;">Any $</div>
-        <div class="donate-label">Every Dollar Counts</div>
-        <div class="donate-desc">Every dollar makes a difference</div>
-        <span class="donate-btn">Donate</span>
+      <a href="https://buy.stripe.com/bJe28rbOib9j7NrdFXgjC04" class="donate-card" target="_blank" rel="noopener">
+        <div class="donate-amount">$250</div>
+        <div class="donate-label">Transform Lives</div>
+        <div class="donate-desc">Funds an international shipment of supplies to communities in Africa</div>
+        <span class="donate-btn">Donate $250</span>
       </a>
 
     </div>
@@ -493,8 +499,8 @@
     <h2 class="section-title">Ways to Give</h2>
     <div class="other-ways">
       <div class="other-ways-card">
-        <h3>Online</h3>
-        <p>Stripe Payment Links are coming soon. You can also donate through <a href="https://givebutter.com" target="_blank" rel="noopener">Givebutter</a>.</p>
+        <h3>Custom Amount</h3>
+        <p>Want to give a different amount? <a href="https://buy.stripe.com/aFa9ATaKe5OZ7Nr59rgjC00" target="_blank" rel="noopener">Choose your own donation amount</a> (minimum $5). You can also donate through <a href="https://givebutter.com" target="_blank" rel="noopener">Givebutter</a>.</p>
       </div>
       <div class="other-ways-card">
         <h3>Employer Matching via Benevity</h3>
@@ -555,6 +561,13 @@
       <p>&copy; 2026 Mimi African Charities of North America (MACONA). All rights reserved. 501(c)(3) nonprofit organization. EIN: 93-3813688.</p>
     </div>
   </footer>
+
+  <script>
+    if (new URLSearchParams(window.location.search).get('thanks') === '1') {
+      document.getElementById('thank-you').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
 
 </body>
 </html>
