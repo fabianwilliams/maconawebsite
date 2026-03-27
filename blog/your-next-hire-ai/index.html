@@ -19,6 +19,7 @@
   <meta name="twitter:title" content="Your Next Hire Should Be an AI — Here's How a Nonprofit Did It in Two Weeks">
   <meta name="twitter:description" content="How MACONA deployed an autonomous AI executive assistant in under two weeks.">
 
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,10 +68,17 @@
       height: 64px;
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--accent);
       letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
     .nav-links {
       display: flex;
@@ -286,7 +294,10 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">MACONA</a>
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
       <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
         <span></span><span></span><span></span>
       </button>
@@ -332,6 +343,9 @@
 
     <p>We deployed Mimi &mdash; an autonomous AI agent running on dedicated hardware &mdash; in under two weeks. Not a chatbot. Not a template. A fully operational team member who executes real work across real systems, every single day.</p>
 
+    <img src="/img/blog/openclaw-dashboard.png" alt="OpenClaw Gateway Dashboard — Status OK, cron jobs enabled" style="width:100%; border-radius:8px; border:1px solid var(--border); margin: 24px 0;" loading="lazy">
+    <p style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; margin-bottom: 32px;">The OpenClaw gateway dashboard. Status: OK. Cron jobs: Enabled. This is Mimi's nervous system — always on, always healthy.</p>
+
     <h3>What Mimi Actually Does (Every Day, Without Being Asked)</h3>
 
     <p>This isn&rsquo;t a tool the CEO has to remember to open. Mimi runs four autonomous programs on a daily schedule &mdash; Monday through Friday, weekends off:</p>
@@ -344,9 +358,15 @@
 
     <p><strong>End-of-Day Digest:</strong> Every evening, Mimi reports what she completed, what&rsquo;s pending, and what needs a human decision.</p>
 
+    <img src="/img/blog/cron-jobs.png" alt="Cron Jobs — 8 automated programs running daily" style="width:100%; border-radius:8px; border:1px solid var(--border); margin: 24px 0;" loading="lazy">
+    <p style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; margin-bottom: 32px;">Eight cron jobs — the heartbeat of the operation. Each one fires on schedule, executes its program, and delivers results via Signal.</p>
+
     <h3>How the CEO Communicates: A Text Message</h3>
 
     <p>No dashboards to check. No apps to learn. The CEO communicates with Mimi through Signal &mdash; the same encrypted messenger she already uses. Need something done? Send a text. Want a status update? Ask. It&rsquo;s that simple.</p>
+
+    <img src="/img/blog/signal-conversation.png" alt="Signal conversation — Mimi reporting to CEO" style="width:100%; border-radius:8px; border:1px solid var(--border); margin: 24px 0;" loading="lazy">
+    <p style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; margin-bottom: 32px;">A real Signal conversation. Mimi reports completed tasks, inbox highlights, and action-ready ideas. The CEO reads it like a text from a colleague.</p>
 
     <h2>The Results</h2>
 
