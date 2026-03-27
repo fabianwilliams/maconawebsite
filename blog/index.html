@@ -9,6 +9,7 @@
   <meta property="og:description" content="Stories, updates, and insights from MACONA — empowering communities in West Africa.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org/blog/">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,10 +58,17 @@
       height: 64px;
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--accent);
       letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
     .nav-links {
       display: flex;
@@ -152,7 +160,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 2rem;
+      overflow: hidden;
       transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
@@ -161,6 +169,17 @@
       background: var(--bg-card-hover);
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 1.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
     .blog-card-date {
       font-size: 0.8rem;
@@ -226,7 +245,10 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">MACONA</a>
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
       <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
         <span></span><span></span><span></span>
       </button>
@@ -251,17 +273,23 @@
   <section class="blog-grid">
 
     <a href="/blog/your-next-hire-ai/" class="blog-card" style="text-decoration:none;">
-      <div class="blog-card-date">March 2026</div>
-      <h2>Your Next Hire Should Be an AI &mdash; Here&rsquo;s How a Nonprofit Did It in Two Weeks</h2>
-      <p>How MACONA went from a one-person operation to a team of two &mdash; without adding headcount. We deployed an autonomous AI executive assistant in under two weeks.</p>
-      <span class="read-more">Read More &rarr;</span>
+      <img src="/img/blog/openclaw-dashboard.png" alt="OpenClaw Gateway Dashboard" loading="lazy">
+      <div class="blog-card-content">
+        <div class="blog-card-date">March 2026</div>
+        <h2>Your Next Hire Should Be an AI</h2>
+        <p>How MACONA went from a one-person operation to a team of two &mdash; without adding headcount. We deployed Mimi, an autonomous AI executive assistant, in under two weeks.</p>
+        <span class="read-more">Read More &rarr;</span>
+      </div>
     </a>
 
     <a href="/blog/spring-campaign/" class="blog-card" style="text-decoration:none;">
-      <div class="blog-card-date">Spring 2024</div>
-      <h2>Spring Giving Campaign 2024</h2>
-      <p>Join MACONA&rsquo;s annual spring campaign supporting education and community development in West Africa. Every dollar goes directly to programs.</p>
-      <span class="read-more">Read More &rarr;</span>
+      <img src="/img/programs/clothing-drive-progress.jpg" alt="Clothing drive progress thermometer" loading="lazy">
+      <div class="blog-card-content">
+        <div class="blog-card-date">Spring 2024</div>
+        <h2>Spring Giving Campaign</h2>
+        <p>Our 2024 clothing drive collected 693 items toward our goal of 1,000. Help us reach the finish line.</p>
+        <span class="read-more">Read More &rarr;</span>
+      </div>
     </a>
 
   </section>

@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate — MACONA</title>
-  <meta name="description" content="Support MACONA's mission to empower communities in West Africa. Every dollar funds education, clean water, and teacher training programs.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Support MACONA's mission to care for children and women in Africa and the Greater Baltimore Area. 100% volunteer-run — every dollar goes directly to programs.">
   <meta property="og:title" content="Donate — MACONA">
-  <meta property="og:description" content="Support communities in West Africa through education, clean water, and teacher training. MACONA is 100% volunteer-run — every dollar goes to impact.">
+  <meta property="og:description" content="Together we can build a world where all youth are cared for, safe, and never go to bed hungry. MACONA is 100% volunteer-run.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org/donate/">
   <style>
@@ -65,11 +66,9 @@
       height: 64px;
     }
 
-    .nav-logo {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: -0.02em;
+    .nav-logo img {
+      height: 40px;
+      width: auto;
     }
 
     .nav-links {
@@ -296,29 +295,6 @@
       transform: scale(1.03);
     }
 
-    /* ── Recurring ── */
-    .recurring {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin-top: 1rem;
-    }
-
-    .recurring h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--text);
-    }
-
-    .recurring p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      max-width: 680px;
-    }
-
     /* ── Tax ── */
     .tax-info {
       background: var(--accent-glow);
@@ -338,6 +314,10 @@
       font-size: 0.98rem;
       color: var(--text-muted);
       line-height: 1.7;
+    }
+
+    .tax-info p + p {
+      margin-top: 0.5rem;
     }
 
     /* ── Other Ways ── */
@@ -444,7 +424,7 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">MACONA</a>
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
       <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span>
         <span></span>
@@ -464,12 +444,12 @@
   <!-- Hero -->
   <section class="hero">
     <h1>Support MACONA's Mission</h1>
-    <p>Your generosity transforms lives in West Africa. From classrooms to clean water, every contribution creates lasting change for families and communities who need it most.</p>
+    <p>Together we can build a world where all youth are cared for, safe, and never go to bed hungry.</p>
   </section>
 
   <!-- Impact Banner -->
   <div class="impact-banner">
-    <p>Your donation directly funds programs in West Africa. MACONA is 100% volunteer-run &mdash; every dollar goes to impact.</p>
+    <p>MACONA is 100% volunteer-run. Every dollar goes directly to programs &mdash; clothing drives, international shipments, food distribution, education, and healthcare for children and women in Africa and the Greater Baltimore Area.</p>
   </div>
 
   <!-- Donation Options -->
@@ -479,63 +459,65 @@
 
       <a href="#stripe-link-pending" class="donate-card">
         <div class="donate-amount">$25</div>
-        <div class="donate-label">Supply a Student</div>
-        <div class="donate-desc">Provides textbooks, notebooks, and school supplies for 5 students</div>
+        <div class="donate-label">Supply a Child</div>
+        <div class="donate-desc">Provides clothing and school supplies for children in need</div>
         <span class="donate-btn">Donate $25</span>
       </a>
 
       <a href="#stripe-link-pending" class="donate-card">
         <div class="donate-amount">$50</div>
-        <div class="donate-label">Support Clean Water</div>
-        <div class="donate-desc">Contributes to well construction and water purification</div>
+        <div class="donate-label">Feed a Family</div>
+        <div class="donate-desc">Supports food distribution in the Greater Baltimore Area</div>
         <span class="donate-btn">Donate $50</span>
       </a>
 
       <a href="#stripe-link-pending" class="donate-card">
         <div class="donate-amount">$100</div>
-        <div class="donate-label">Fund a Teacher</div>
-        <div class="donate-desc">Sponsors teacher training for local educators</div>
+        <div class="donate-label">Ship Supplies</div>
+        <div class="donate-desc">Helps fund tracked container shipments to Dakar, Senegal</div>
         <span class="donate-btn">Donate $100</span>
       </a>
 
       <a href="#stripe-link-pending" class="donate-card">
         <div class="donate-amount" style="font-size: 2rem;">Any $</div>
-        <div class="donate-label">Give Any Amount</div>
-        <div class="donate-desc">Every dollar makes a difference in the lives of families across West Africa</div>
+        <div class="donate-label">Every Dollar Counts</div>
+        <div class="donate-desc">Every dollar makes a difference</div>
         <span class="donate-btn">Donate</span>
       </a>
 
     </div>
   </section>
 
-  <!-- Recurring Giving -->
+  <!-- Ways to Give -->
   <section class="section" style="padding-top: 0;">
-    <div class="recurring">
-      <h2>Make It Monthly</h2>
-      <p>Consistent support helps us plan ahead and sustain programs year-round. Stripe Payment Links support recurring donations &mdash; simply choose monthly when you check out. Your ongoing commitment means we can make long-term investments in communities that depend on us.</p>
+    <h2 class="section-title">Ways to Give</h2>
+    <div class="other-ways">
+      <div class="other-ways-card">
+        <h3>Online</h3>
+        <p>Stripe Payment Links are coming soon. You can also donate through <a href="https://givebutter.com" target="_blank" rel="noopener">Givebutter</a>.</p>
+      </div>
+      <div class="other-ways-card">
+        <h3>Employer Matching via Benevity</h3>
+        <p>Many employers match charitable donations through Benevity. Search for <strong>"MACONA"</strong> or <strong>"Mimi African Charities"</strong> in your company's giving portal.</p>
+      </div>
+      <div class="other-ways-card">
+        <h3>In-Kind Donations</h3>
+        <p>We accept clothing, shoes, school supplies, food, and medicine. Contact us at <a href="mailto:contact@macona.org">contact@macona.org</a> to arrange a donation.</p>
+      </div>
+      <div class="other-ways-card">
+        <h3>Corporate Partnerships</h3>
+        <p>For corporate partnerships, sponsorships, or large gifts, email <a href="mailto:contact@macona.org">contact@macona.org</a>.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Tax Deductible -->
+  <!-- Tax Information -->
   <section class="section" style="padding-top: 0;">
     <div class="tax-info">
       <h2>Tax-Deductible Giving</h2>
-      <p>MACONA is a registered 501(c)(3) nonprofit organization. Your donation is tax-deductible to the extent allowed by law. You will receive a receipt from Stripe for your records. EIN: <em>[pending]</em></p>
-    </div>
-  </section>
-
-  <!-- Other Ways to Give -->
-  <section class="section" style="padding-top: 0;">
-    <h2 class="section-title">Other Ways to Give</h2>
-    <div class="other-ways">
-      <div class="other-ways-card">
-        <h3>Employer Matching via Benevity</h3>
-        <p>Many employers match charitable donations through Benevity. Search for <strong>MACONA</strong> in your company's giving portal to double your impact at no extra cost.</p>
-      </div>
-      <div class="other-ways-card">
-        <h3>Corporate &amp; Planned Giving</h3>
-        <p>For large gifts, corporate partnerships, or planned giving, contact us at <a href="mailto:info@macona.org">info@macona.org</a>. We'd love to discuss how we can work together.</p>
-      </div>
+      <p>Mimi African Charities of North America (MACONA) is a registered 501(c)(3) nonprofit organization.</p>
+      <p><strong>EIN: 93-3813688</strong></p>
+      <p>Your donation is tax-deductible to the extent allowed by law. You will receive a receipt for your records.</p>
     </div>
   </section>
 
@@ -546,12 +528,16 @@
       <div class="trust-label">501(c)(3) Tax Exempt</div>
     </div>
     <div class="trust-item">
+      <div class="trust-icon">&#128196;</div>
+      <div class="trust-label">EIN: 93-3813688</div>
+    </div>
+    <div class="trust-item">
       <div class="trust-icon">&#10084;&#65039;</div>
       <div class="trust-label">100% Volunteer-Run</div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">&#128274;</div>
-      <div class="trust-label">Secure Payment via Stripe</div>
+      <div class="trust-label">Secure Payment</div>
     </div>
   </div>
 
@@ -566,7 +552,7 @@
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
-      <p>&copy; 2026 MACONA. All rights reserved. MACONA is a 501(c)(3) nonprofit organization.</p>
+      <p>&copy; 2026 Mimi African Charities of North America (MACONA). All rights reserved. 501(c)(3) nonprofit organization. EIN: 93-3813688.</p>
     </div>
   </footer>
 

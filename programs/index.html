@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programs — MACONA</title>
-  <meta name="description" content="MACONA operates programs across West Africa focused on education, clean water, and community development.">
+  <meta name="description" content="MACONA operates seasonal campaigns across Africa and the Greater Baltimore Area, focused on clothing, food, education, and medicine.">
   <meta property="og:title" content="Programs — MACONA">
-  <meta property="og:description" content="Education, clean water, and community development programs across West Africa. 100% volunteer-driven — every dollar goes directly to communities.">
+  <meta property="og:description" content="Seasonal campaigns across Africa and the Greater Baltimore Area — clothing drives, international shipments, food, healthcare, and education.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org/programs/">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,10 +58,12 @@
       height: 64px;
     }
     .nav-logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--accent);
-      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 40px;
+      width: auto;
     }
     .nav-links {
       display: flex;
@@ -152,7 +155,6 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 2rem;
       transition: background 0.2s, box-shadow 0.2s;
       display: flex;
       flex-direction: column;
@@ -168,13 +170,26 @@
       height: 4px;
       border-radius: 12px 12px 0 0;
     }
-    .program-card.education::before { background: var(--accent); }
-    .program-card.water::before { background: #3b82f6; }
-    .program-card.community::before { background: var(--accent2); }
+    .program-card.clothing::before { background: var(--accent); }
+    .program-card.shipping::before { background: #3b82f6; }
+    .program-card.food::before { background: var(--accent2); }
+    .program-card.healthcare::before { background: #e74c3c; }
+    .program-card.education::before { background: #8b5cf6; }
 
     .program-card:hover {
       background: var(--bg-card-hover);
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .program-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .program-card-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
     .program-icon {
       font-size: 2.25rem;
@@ -204,6 +219,7 @@
       padding: 0.4rem 0.85rem;
       border-radius: 20px;
       margin-bottom: 1.25rem;
+      align-self: flex-start;
     }
     .program-cta {
       display: inline-block;
@@ -223,14 +239,59 @@
       text-decoration: none;
     }
 
-    /* ---- Highlight Section (Summer Youth) ---- */
-    .highlight-section {
+    /* ---- How We Operate ---- */
+    .how-section {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 0 1.5rem 3rem;
     }
-    .highlight-card {
-      background: linear-gradient(135deg, var(--accent-glow), rgba(212,163,115,0.08));
+    .how-section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .how-section > p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .how-list {
+      max-width: 720px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .how-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .how-list li::before {
+      content: '\2713';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* ---- Shipment Tracking ---- */
+    .tracking-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+    .tracking-card {
+      background: linear-gradient(135deg, var(--accent-glow), rgba(59,130,246,0.08));
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 2.5rem;
@@ -238,49 +299,35 @@
       gap: 2rem;
       align-items: center;
     }
-    .highlight-icon {
-      font-size: 3rem;
+    .tracking-card img {
+      width: 280px;
+      height: auto;
+      border-radius: 10px;
       flex-shrink: 0;
+      object-fit: cover;
     }
-    .highlight-card h2 {
+    .tracking-card h2 {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
       color: var(--accent);
     }
-    .highlight-card p {
+    .tracking-card p {
       color: var(--text-muted);
       font-size: 1rem;
       line-height: 1.7;
     }
     @media (max-width: 600px) {
-      .highlight-card {
+      .tracking-card {
         flex-direction: column;
         text-align: center;
         padding: 2rem 1.5rem;
       }
-    }
-
-    /* ---- How We Deliver ---- */
-    .how-section {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 1.5rem 3rem;
-      text-align: center;
-    }
-    .how-section h2 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-    .how-section p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 720px;
-      margin: 0 auto;
-      line-height: 1.7;
+      .tracking-card img {
+        width: 100%;
+        max-width: 320px;
+      }
     }
 
     /* ---- CTA Banner ---- */
@@ -349,7 +396,7 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">MACONA</a>
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
       <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
         <span></span><span></span><span></span>
       </button>
@@ -367,59 +414,92 @@
   <!-- Page Header -->
   <header class="page-header">
     <h1>Our Programs</h1>
-    <p>MACONA operates programs across West Africa focused on three pillars: education, clean water, and community development.</p>
+    <p>MACONA operates seasonal campaigns across Africa and the Greater Baltimore Area, focused on clothing, food, education, and medicine.</p>
   </header>
 
   <!-- Program Cards -->
   <section class="programs-grid">
 
-    <div class="program-card education">
-      <div class="program-icon">&#x1F393;</div>
-      <h2>School Supplies Distribution</h2>
-      <p class="description">Distributing learning materials &mdash; textbooks, notebooks, pens, and educational supplies &mdash; to students in underserved communities across West Africa.</p>
-      <div class="program-impact">Supporting 200+ students annually</div>
-      <a href="/donate/" class="program-cta">Support This Program</a>
-    </div>
-
-    <div class="program-card water">
-      <div class="program-icon">&#x1F4A7;</div>
-      <h2>Clean Water Access</h2>
-      <p class="description">Providing access to safe, clean drinking water through well construction, water purification systems, and community education on water safety and sanitation.</p>
-      <div class="program-impact">Improving health outcomes for entire communities</div>
-      <a href="/donate/" class="program-cta">Support This Program</a>
-    </div>
-
-    <div class="program-card community">
-      <div class="program-icon">&#x1F91D;</div>
-      <h2>Community Development</h2>
-      <p class="description">Building local capacity through teacher training programs, youth mentorship, infrastructure improvements, and sustainable economic development initiatives.</p>
-      <div class="program-impact">20 teachers trained, Summer Youth Initiative</div>
-      <a href="/donate/" class="program-cta">Support This Program</a>
-    </div>
-
-  </section>
-
-  <!-- Summer Youth Initiative Highlight -->
-  <section class="highlight-section">
-    <div class="highlight-card">
-      <div class="highlight-icon">&#x2600;&#xFE0F;</div>
-      <div>
-        <h2>Summer Youth Initiative</h2>
-        <p>Our flagship education program serves 200 youth in West Africa through summer tutoring, school supply distribution, and training for 20 local teachers to build lasting capacity. By investing in both students and educators, we create a multiplier effect that extends far beyond the summer months.</p>
+    <!-- Card 1: Clothing & Supply Drives -->
+    <div class="program-card clothing">
+      <img src="/img/programs/summer-drive.jpg" alt="Clothing and supply drive collection" class="program-card-img">
+      <div class="program-card-body">
+        <h2>Clothing &amp; Supply Drives</h2>
+        <p class="description">We run seasonal clothing and supply drives at local high schools, tech events, and the Microsoft campus. Our 2024 H1 drive collected 693 items toward our goal of 1,000 &mdash; clothing, shoes, books, and stuffed animals for children in need.</p>
+        <div class="program-impact">693 of 1,000 items collected</div>
+        <a href="/donate/" class="program-cta">Support This Drive</a>
       </div>
     </div>
+
+    <!-- Card 2: International Shipments -->
+    <div class="program-card shipping">
+      <img src="/img/programs/dakar-shipment.jpg" alt="Container shipment to Dakar, Senegal" class="program-card-img">
+      <div class="program-card-body">
+        <h2>International Shipments to West Africa</h2>
+        <p class="description">Every donation is shipped directly to communities in need. We send tracked container shipments from Maryland to Dakar, Senegal &mdash; GPS-tracked the entire journey across the Atlantic. Our shipment trackers (MACONA-TKR-1 through TKR-4) ensure full transparency.</p>
+        <div class="program-impact">Tracked from Maryland to Dakar, Senegal</div>
+        <a href="/donate/" class="program-cta">Help Ship Supplies</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Food & Nutrition -->
+    <div class="program-card food">
+      <div class="program-card-body">
+        <div class="program-icon">&#x1F35E;</div>
+        <h2>Food &amp; Nutrition</h2>
+        <p class="description">Food drives in the Greater Baltimore Area supporting families in need. We partner with local communities to collect and distribute food, ensuring no family goes hungry.</p>
+        <a href="/donate/" class="program-cta">Support Food Programs</a>
+      </div>
+    </div>
+
+    <!-- Card 4: Healthcare & Medicine -->
+    <div class="program-card healthcare">
+      <div class="program-card-body">
+        <div class="program-icon">&#x1FA7A;</div>
+        <h2>Healthcare &amp; Medicine</h2>
+        <p class="description">Collecting and distributing medicine and healthcare supplies to communities in Africa. Working toward sustainable healthcare access for children and women.</p>
+        <a href="/donate/" class="program-cta">Support Healthcare</a>
+      </div>
+    </div>
+
+    <!-- Card 5: Education -->
+    <div class="program-card education">
+      <div class="program-card-body">
+        <div class="program-icon">&#x1F393;</div>
+        <h2>Education</h2>
+        <p class="description">Education programs and supply distribution for youth. School supplies, educational materials, and teacher training to build lasting capacity in West African communities.</p>
+        <a href="/donate/" class="program-cta">Support Education</a>
+      </div>
+    </div>
+
   </section>
 
-  <!-- How We Deliver -->
+  <!-- How We Operate -->
   <section class="how-section">
-    <h2>How We Deliver</h2>
-    <p>MACONA partners with local organizations in West Africa to ensure programs are culturally appropriate, efficiently delivered, and create lasting impact. Our all-volunteer model means 100% of program funding goes directly to the communities we serve.</p>
+    <h2>How We Operate</h2>
+    <p>Our strategy relies on Cash and In-Kind donations. Cash drives run in H1 and H2 semesters. In-Kind drives (clothing, food, educational supplies, medicine) are seasonal &mdash; Spring, Summer, Fall, and Winter.</p>
+    <ul class="how-list">
+      <li>Cash donations through macona.org, Givebutter, and Benevity corporate matching</li>
+      <li>In-Kind donations collected at local events, schools, and corporate campuses</li>
+      <li>International shipping tracked via GPS from collection to delivery</li>
+    </ul>
+  </section>
+
+  <!-- Shipment Tracking -->
+  <section class="tracking-section">
+    <div class="tracking-card">
+      <img src="/img/programs/shipment-trackers.png" alt="MACONA GPS shipment trackers">
+      <div>
+        <h2>Shipment Tracking</h2>
+        <p>We track every shipment from Maryland to West Africa. Our GPS trackers (MACONA-TKR-1 through TKR-4) provide real-time visibility as supplies cross the Atlantic to Dakar, Senegal.</p>
+      </div>
+    </div>
   </section>
 
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="cta-banner-inner">
-      <p>Every dollar makes a difference. Support our programs today.</p>
+      <p>Every donation makes a difference.</p>
       <a href="/donate/" class="cta-btn">Donate Now</a>
     </div>
   </section>

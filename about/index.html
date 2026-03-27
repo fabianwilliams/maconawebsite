@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About MACONA — Mimi African Charities Organization of North America</title>
-  <meta name="description" content="MACONA is a 501(c)(3) nonprofit dedicated to improving lives in West Africa through education, clean water, and sustainable development.">
+  <title>About MACONA — Mimi African Charities of North America</title>
+  <meta name="description" content="MACONA is a 501(c)(3) nonprofit dedicated to providing relief and support for children and women in Africa and the Greater Baltimore Area.">
+  <link rel="icon" type="image/png" href="/favicon.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="About MACONA">
-  <meta property="og:description" content="MACONA (Mimi African Charities Organization of North America) is a 501(c)(3) nonprofit dedicated to improving lives in West Africa through education, clean water, and sustainable development.">
+  <meta property="og:description" content="MACONA (Mimi African Charities of North America) is a 501(c)(3) nonprofit dedicated to providing relief and support for children and women in Africa and the Greater Baltimore Area.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org/about/">
 
@@ -69,10 +70,13 @@
     }
 
     .nav-logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
     }
 
     .nav-links {
@@ -193,6 +197,31 @@
       margin-bottom: 0;
     }
 
+    /* ===== Detail List ===== */
+    .detail-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .detail-list li {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .detail-list li:last-child {
+      border-bottom: none;
+    }
+
+    .detail-list strong {
+      color: var(--text);
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+
     /* ===== Cards Grid ===== */
     .card-grid {
       display: grid;
@@ -256,53 +285,55 @@
       margin-top: 0.25rem;
     }
 
-    /* ===== Leader Card ===== */
-    .leader {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
+    /* ===== Board Member Cards ===== */
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
-    .leader-avatar {
-      width: 96px;
-      height: 96px;
+    .board-member {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .board-avatar {
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       background: var(--accent-glow);
       border: 3px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--accent);
       flex-shrink: 0;
     }
 
-    .leader-info h3 {
-      font-size: 1.25rem;
+    .board-info h3 {
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
 
-    .leader-info .leader-title {
+    .board-info p {
       font-size: 0.95rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .leader-info p {
-      font-size: 1rem;
       color: var(--text-muted);
-      line-height: 1.7;
     }
 
     /* ===== Partners ===== */
     .partners-grid {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
       margin-top: 2rem;
     }
@@ -327,24 +358,14 @@
       background: var(--bg-card-hover);
     }
 
-    /* ===== Innovation Highlight ===== */
-    .highlight-box {
-      background: var(--bg-card);
-      border: 1px solid var(--accent);
-      border-left: 4px solid var(--accent);
-      border-radius: 12px;
-      padding: 2rem 2.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .highlight-box p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    .highlight-box a {
+    .partner-category {
+      font-size: 0.8rem;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.25rem;
     }
 
     /* ===== CTA Banner ===== */
@@ -420,6 +441,13 @@
       line-height: 1.6;
     }
 
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
     .footer h4 {
       font-size: 0.85rem;
       font-weight: 700;
@@ -482,10 +510,17 @@
       .section { padding: 3rem 0; }
       .section h2 { font-size: 1.5rem; }
 
-      .leader {
+      .detail-list li {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 0.25rem;
+      }
+
+      .detail-list strong {
+        min-width: auto;
+      }
+
+      .board-grid {
+        grid-template-columns: 1fr;
       }
 
       .footer-inner {
@@ -504,7 +539,7 @@
   <!-- ===== Navigation ===== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">MACONA</a>
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -523,50 +558,62 @@
   <header class="hero">
     <div class="container">
       <h1>About MACONA</h1>
-      <p>A 501(c)(3) nonprofit organization building a brighter future for communities in West Africa through education, clean water, and sustainable development.</p>
+      <p>A registered 501(c)(3) nonprofit providing relief and support for children and women in Africa and the Greater Baltimore Area.</p>
     </div>
   </header>
 
   <main>
 
-    <!-- ===== Our Mission ===== -->
-    <section class="section" id="mission">
+    <!-- ===== Legal Structure ===== -->
+    <section class="section" id="legal">
       <div class="container">
-        <span class="section-label">Our Mission</span>
-        <h2>Transforming Communities Through Direct Action</h2>
-        <p>MACONA (Mimi African Charities Organization of North America) is a 501(c)(3) nonprofit organization dedicated to improving the lives of communities in West Africa through education, clean water, and sustainable development.</p>
-        <p>Founded by Mariam Williams, MACONA operates on a simple belief: every child deserves access to education, every family deserves clean water, and every community deserves the tools to build a sustainable future.</p>
+        <span class="section-label">Legal Structure</span>
+        <h2>Who We Are</h2>
+        <p>Mimi African Charities of North America (MACONA) is a registered US 501(c)(3) Non-Profit Corporation based in Laurel, Maryland, USA.</p>
+        <ul class="detail-list">
+          <li><strong>Address</strong> 7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723</li>
+          <li><strong>EIN</strong> 93-3813688</li>
+          <li><strong>Designate</strong> Public Charity</li>
+          <li><strong>Contact</strong> <a href="mailto:contact@macona.org">contact@macona.org</a></li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===== Our Story ===== -->
-    <section class="section" id="story">
+    <!-- ===== Mission ===== -->
+    <section class="section" id="mission">
       <div class="container">
-        <span class="section-label">Our Story</span>
-        <h2>From Personal Connection to Community Impact</h2>
-        <p>MACONA grew out of a deep personal connection to West Africa and a commitment to making a tangible difference. Our founder, Mariam Williams, saw firsthand the challenges facing communities — under-resourced schools, limited access to clean water, and a lack of sustainable infrastructure — and knew that meaningful change was possible with the right approach.</p>
-        <p>Rather than building a large bureaucratic organization, Mariam chose a different path: an all-volunteer model where every dollar donated goes directly to programs on the ground. There is no paid staff. No overhead salaries. No expensive office space. Just a dedicated team of volunteers who share a vision of empowered communities.</p>
-        <p>This lean approach means donors can trust that their contributions create real impact — funding school supplies, training teachers, and delivering clean water to families who need it most.</p>
+        <span class="section-label">Our Mission</span>
+        <h2>Empowering Communities Through Direct Action</h2>
+        <p>MACONA is dedicated to providing relief and support for children and women in Africa and the Greater Baltimore Area. Our mission is to empower communities by providing access to basic needs such as healthcare, education, and nutrition. We strive to create sustainable solutions that will improve the lives of those in need, and to work towards a future where poverty and inequality are no longer barriers to a fulfilling life. Our efforts will be focused on Africa and the greater Baltimore area, and we will work in partnership with local communities to achieve our goals.</p>
+      </div>
+    </section>
+
+    <!-- ===== Vision ===== -->
+    <section class="section" id="vision">
+      <div class="container">
+        <span class="section-label">Our Vision</span>
+        <h2>A Future Without Barriers</h2>
+        <p>To create a world where every child and woman has access to basic needs such as healthcare, education, and nutrition. We believe that every individual deserves the opportunity to live a healthy and fulfilling life, regardless of their circumstances.</p>
       </div>
     </section>
 
     <!-- ===== Impact Stats ===== -->
     <section class="section" id="impact">
       <div class="container">
-        <span class="section-label">Our Impact</span>
-        <h2>Numbers That Tell the Story</h2>
+        <span class="section-label">At a Glance</span>
+        <h2>How We Operate</h2>
         <div class="stats">
-          <div class="stat">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">Students Served</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">20</div>
-            <div class="stat-label">Teachers Trained</div>
-          </div>
           <div class="stat">
             <div class="stat-number">100%</div>
             <div class="stat-label">Volunteer-Run</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Seasonal Drives / Year</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Cash Semesters (H1 &amp; H2)</div>
           </div>
           <div class="stat">
             <div class="stat-number">$0</div>
@@ -576,74 +623,136 @@
       </div>
     </section>
 
-    <!-- ===== Leadership ===== -->
-    <section class="section" id="leadership">
+    <!-- ===== Our Board ===== -->
+    <section class="section" id="board">
       <div class="container">
-        <span class="section-label">Leadership</span>
-        <h2>Led by Purpose, Driven by Heart</h2>
-        <div class="leader">
-          <div class="leader-avatar" aria-hidden="true">MW</div>
-          <div class="leader-info">
-            <h3>Mariam Williams</h3>
-            <div class="leader-title">CEO &amp; Founder</div>
-            <p>Mariam founded MACONA with a vision of creating direct, lasting impact in West African communities. Drawing on her personal connection to the region and her professional experience, she built an organization that prioritizes efficiency and transparency. Under her leadership, MACONA has grown from a grassroots effort into a recognized 501(c)(3) nonprofit with technology-forward operations and strong community partnerships.</p>
+        <span class="section-label">Our Board</span>
+        <h2>Initial Directors</h2>
+        <p>MACONA is governed by a board of directors committed to transparency, direct impact, and responsible stewardship of donor resources.</p>
+        <div class="board-grid">
+          <div class="board-member">
+            <div class="board-avatar" aria-hidden="true">NC</div>
+            <div class="board-info">
+              <h3>Novlet Cole-Strachan</h3>
+              <p>Board Member</p>
+            </div>
+          </div>
+          <div class="board-member">
+            <div class="board-avatar" aria-hidden="true">KD</div>
+            <div class="board-info">
+              <h3>Kinty Diallo</h3>
+              <p>Board Member</p>
+            </div>
           </div>
         </div>
-        <p style="margin-top: 2rem;">MACONA is governed by an all-volunteer board of directors who share Mariam's commitment to transparency, direct impact, and responsible stewardship of donor resources.</p>
       </div>
     </section>
 
-    <!-- ===== How We Work ===== -->
-    <section class="section" id="how-we-work">
+    <!-- ===== Campaigns & Operations ===== -->
+    <section class="section" id="campaigns">
       <div class="container">
-        <span class="section-label">How We Work</span>
-        <h2>The All-Volunteer Model</h2>
-        <p>MACONA's strength is our lean, volunteer-driven structure. By eliminating administrative overhead, we ensure that donations go where they matter most — directly to the communities we serve.</p>
+        <span class="section-label">Campaigns &amp; Operations</span>
+        <h2>How We Raise and Deploy Resources</h2>
+        <p>MACONA's strategy relies on both Cash and In-Kind donations, organized around seasonal campaigns and semester-based fundraising cycles.</p>
         <div class="card-grid">
           <article class="card">
-            <h3>Local Partnerships</h3>
-            <p>We partner with trusted organizations already embedded in West African communities. These local partners understand the needs on the ground and ensure that resources reach the right people efficiently.</p>
+            <h3>Seasonal Drives</h3>
+            <p>We run four seasonal campaigns each year — Spring, Summer, Fall, and Winter — to collect clothing, food, educational supplies, and medicine for communities in need.</p>
           </article>
           <article class="card">
-            <h3>School Supplies &amp; Education</h3>
-            <p>We distribute school supplies and learning materials to under-resourced schools, removing barriers that keep children from accessing education. Our programs have served over 200 students to date.</p>
+            <h3>Cash Fundraising</h3>
+            <p>Cash drives are organized into two semesters: H1 (January-June) and H2 (July-December). Funds are raised through our website, Givebutter for direct cash donations, and Benevity for corporate matching programs.</p>
           </article>
           <article class="card">
-            <h3>Teacher Training</h3>
-            <p>We invest in educators through hands-on training programs that equip local teachers with modern teaching methods. Twenty teachers across our partner schools have completed our training programs.</p>
+            <h3>In-Kind Donations</h3>
+            <p>We collect clothing, food, educational supplies, and medicine through drives at local high schools, tech events, and the Microsoft campus, as well as local food and clothing drives.</p>
           </article>
           <article class="card">
-            <h3>Summer Youth Initiative</h3>
-            <p>Our signature Summer Youth Initiative brings together students for intensive learning experiences that go beyond the traditional school year — building skills, confidence, and community among young learners.</p>
+            <h3>International Shipments</h3>
+            <p>Collected goods are tracked and shipped internationally, with shipments to Dakar, Senegal among our established routes for reaching communities in Africa.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== Our Partners ===== -->
+    <!-- ===== Operations Highlights ===== -->
+    <section class="section" id="operations">
+      <div class="container">
+        <span class="section-label">On the Ground</span>
+        <h2>Where We Show Up</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Local High Schools</h3>
+            <p>Clothing drives organized at high schools in the Greater Baltimore Area, engaging students and families in direct community action.</p>
+          </article>
+          <article class="card">
+            <h3>Tech Events</h3>
+            <p>Clothing and supply drives hosted at technology conferences, connecting the tech community with hands-on philanthropy.</p>
+          </article>
+          <article class="card">
+            <h3>Microsoft Campus</h3>
+            <p>Clothing drives on the Microsoft campus, leveraging employee giving programs and corporate matching through Benevity.</p>
+          </article>
+          <article class="card">
+            <h3>Local Community Drives</h3>
+            <p>Food and clothing drives organized locally in the Laurel, Maryland area and Greater Baltimore region.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Platforms ===== -->
+    <section class="section" id="platforms">
+      <div class="container">
+        <span class="section-label">Donation Platforms</span>
+        <h2>Ways to Give</h2>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-number" style="font-size: 1.5rem;">macona.org</div>
+            <div class="stat-label">Website</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" style="font-size: 1.5rem;">Givebutter</div>
+            <div class="stat-label">Cash Donations</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" style="font-size: 1.5rem;">Benevity</div>
+            <div class="stat-label">Corporate Matching</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Partners ===== -->
     <section class="section" id="partners">
       <div class="container">
         <span class="section-label">Our Partners</span>
         <h2>Supported by Organizations That Share Our Values</h2>
-        <p>We are grateful for the technology grants and employee giving platforms that amplify our impact and help us operate efficiently.</p>
         <div class="partners-grid">
-          <div class="partner">Microsoft</div>
-          <div class="partner">Benevity</div>
-          <!-- Add partner logos here as images become available -->
-        </div>
-        <p style="margin-top: 1.5rem;"><strong>Microsoft</strong> provides nonprofit technology grants that power our operations. <strong>Benevity</strong> connects us with employee giving programs, making it easy for corporate donors to support our mission through payroll giving and matching gifts.</p>
-      </div>
-    </section>
-
-    <!-- ===== Innovation ===== -->
-    <section class="section" id="innovation">
-      <div class="container">
-        <span class="section-label">Innovation</span>
-        <h2>Small Organization, Enterprise Technology</h2>
-        <p>We believe small organizations deserve the same technology advantages as large enterprises.</p>
-        <div class="highlight-box">
-          <p>MACONA is one of the first nonprofits to deploy an AI executive assistant — <strong>Mimi</strong> — to handle daily operations. From social media management to donor research and communications, Mimi automates the work that would normally require dedicated staff, so our CEO can focus on strategy and relationships.</p>
-          <p style="margin-top: 1rem;">This is what the future of lean nonprofits looks like: leveraging AI to do more with less, without sacrificing quality or impact. <a href="/blog/">Read the full case study on our blog &rarr;</a></p>
+          <div class="partner">
+            <div>
+              <span class="partner-category">Technology</span>
+              Microsoft
+            </div>
+          </div>
+          <div class="partner">
+            <div>
+              <span class="partner-category">Events</span>
+              Tech Conferences
+            </div>
+          </div>
+          <div class="partner">
+            <div>
+              <span class="partner-category">Philanthropic</span>
+              Benevity
+            </div>
+          </div>
+          <div class="partner">
+            <div>
+              <span class="partner-category">Philanthropic</span>
+              Givebutter
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -664,12 +773,14 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="nav-logo">MACONA</div>
-        <p>Mimi African Charities Organization of North America. A 501(c)(3) nonprofit improving lives in West Africa through education, clean water, and sustainable development.</p>
+        <div class="footer-logo">MACONA</div>
+        <p>Mimi African Charities of North America. A 501(c)(3) nonprofit providing relief and support for children and women in Africa and the Greater Baltimore Area.</p>
+        <p style="margin-top: 0.5rem;">7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723</p>
       </div>
       <div>
         <h4>Organization</h4>
         <ul>
+          <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
           <li><a href="/programs/">Programs</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -687,14 +798,13 @@
       <div>
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">EIN: Available on Request</a></li>
+          <li>EIN: 93-3813688</li>
+          <li><a href="mailto:contact@macona.org">contact@macona.org</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 MACONA. All rights reserved. MACONA is a 501(c)(3) tax-exempt organization.</p>
+      <p>&copy; 2026 MACONA. All rights reserved. MACONA is a 501(c)(3) tax-exempt organization. EIN: 93-3813688.</p>
     </div>
   </footer>
 
