@@ -285,49 +285,56 @@
       margin-top: 0.25rem;
     }
 
-    /* ===== Board Member Cards ===== */
-    .board-grid {
+    /* ===== Leadership Section ===== */
+    .leadership-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
       margin-top: 2rem;
     }
 
-    .board-member {
+    .leader-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
+      overflow: hidden;
+      text-align: center;
+      transition: box-shadow 0.2s;
     }
 
-    .board-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--accent-glow);
-      border: 3px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--accent);
-      flex-shrink: 0;
+    .leader-card:hover {
+      box-shadow: 0 4px 20px var(--accent-glow);
     }
 
-    .board-info h3 {
-      font-size: 1.1rem;
+    .leader-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .leader-info {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .leader-info h3 {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.25rem;
     }
 
-    .board-info p {
+    .leader-info .leader-title {
       font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .leader-info p {
+      font-size: 0.9rem;
       color: var(--text-muted);
+      line-height: 1.6;
     }
 
     /* ===== Partners ===== */
@@ -623,25 +630,35 @@
       </div>
     </section>
 
-    <!-- ===== Our Board ===== -->
-    <section class="section" id="board">
+    <!-- ===== Leadership ===== -->
+    <section class="section" id="leadership">
       <div class="container">
-        <span class="section-label">Our Board</span>
-        <h2>Initial Directors</h2>
-        <p>MACONA is governed by a board of directors committed to transparency, direct impact, and responsible stewardship of donor resources.</p>
-        <div class="board-grid">
-          <div class="board-member">
-            <div class="board-avatar" aria-hidden="true">NC</div>
-            <div class="board-info">
-              <h3>Novlet Cole-Strachan</h3>
-              <p>Board Member</p>
+        <span class="section-label">Our Leadership</span>
+        <h2>The People Behind MACONA</h2>
+        <p>MACONA is led by a dedicated team committed to transparency, direct impact, and responsible stewardship of donor resources. Every member of our leadership serves as a volunteer.</p>
+        <div class="leadership-grid">
+          <div class="leader-card">
+            <img src="/img/team/mariam-williams.jpg" alt="Mariam Williams" class="leader-photo">
+            <div class="leader-info">
+              <h3>Mariam Williams</h3>
+              <div class="leader-title">Founder &amp; CEO</div>
+              <p>Founded MACONA to build a world where all youth are cared for, safe, and never go to bed hungry. Leads all operations, fundraising, and international shipments.</p>
             </div>
           </div>
-          <div class="board-member">
-            <div class="board-avatar" aria-hidden="true">KD</div>
-            <div class="board-info">
+          <div class="leader-card">
+            <img src="/img/team/novlet-cole-strachan.jpg" alt="Novlet Cole-Strachan" class="leader-photo">
+            <div class="leader-info">
+              <h3>Novlet Cole-Strachan</h3>
+              <div class="leader-title">Director</div>
+              <p>Board director providing governance oversight and strategic guidance for MACONA's programs and community initiatives.</p>
+            </div>
+          </div>
+          <div class="leader-card">
+            <img src="/img/team/kinty-diallo.jpg" alt="Kinty Diallo" class="leader-photo">
+            <div class="leader-info">
               <h3>Kinty Diallo</h3>
-              <p>Board Member</p>
+              <div class="leader-title">Director</div>
+              <p>Board director supporting MACONA's mission through oversight of operations and community partnerships.</p>
             </div>
           </div>
         </div>
