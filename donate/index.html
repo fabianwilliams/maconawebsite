@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate — MACONA</title>
+  <meta name="description" content="Support MACONA's mission to empower communities in West Africa. Every dollar funds education, clean water, and teacher training programs.">
+  <meta property="og:title" content="Donate — MACONA">
+  <meta property="og:description" content="Support communities in West Africa through education, clean water, and teacher training. MACONA is 100% volunteer-run — every dollar goes to impact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://macona.org/donate/">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      margin: 5px 0;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 3.5rem;
+      background: linear-gradient(180deg, var(--accent-glow) 0%, var(--bg) 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 3.5rem 1.5rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* ── Sections ── */
+    .section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .section-text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      line-height: 1.7;
+    }
+
+    /* ── Impact Banner ── */
+    .impact-banner {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .impact-banner p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    /* ── Donation Cards ── */
+    .donate-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .donate-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .donate-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .donate-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 2.25rem 1.5rem 2rem;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .donate-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+      box-shadow: 0 8px 32px var(--accent-glow);
+      transform: translateY(-4px);
+      text-decoration: none;
+    }
+
+    .donate-amount {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .donate-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .donate-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .donate-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.01em;
+    }
+
+    .donate-card:hover .donate-btn {
+      background: #245a42;
+      transform: scale(1.03);
+    }
+
+    /* ── Recurring ── */
+    .recurring {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-top: 1rem;
+    }
+
+    .recurring h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .recurring p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 680px;
+    }
+
+    /* ── Tax ── */
+    .tax-info {
+      background: var(--accent-glow);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      margin-top: 1rem;
+    }
+
+    .tax-info h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .tax-info p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── Other Ways ── */
+    .other-ways {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .other-ways {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .other-ways-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .other-ways-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .other-ways-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Trust Signals ── */
+    .trust {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding: 2.5rem 1.5rem 3.5rem;
+      text-align: center;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .trust-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .trust-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--text);
+      color: #ccc;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: var(--accent2);
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">MACONA</a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/" class="active">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Support MACONA's Mission</h1>
+    <p>Your generosity transforms lives in West Africa. From classrooms to clean water, every contribution creates lasting change for families and communities who need it most.</p>
+  </section>
+
+  <!-- Impact Banner -->
+  <div class="impact-banner">
+    <p>Your donation directly funds programs in West Africa. MACONA is 100% volunteer-run &mdash; every dollar goes to impact.</p>
+  </div>
+
+  <!-- Donation Options -->
+  <section class="section">
+    <h2 class="section-title">Choose Your Impact</h2>
+    <div class="donate-grid">
+
+      <a href="#stripe-link-pending" class="donate-card">
+        <div class="donate-amount">$25</div>
+        <div class="donate-label">Supply a Student</div>
+        <div class="donate-desc">Provides textbooks, notebooks, and school supplies for 5 students</div>
+        <span class="donate-btn">Donate $25</span>
+      </a>
+
+      <a href="#stripe-link-pending" class="donate-card">
+        <div class="donate-amount">$50</div>
+        <div class="donate-label">Support Clean Water</div>
+        <div class="donate-desc">Contributes to well construction and water purification</div>
+        <span class="donate-btn">Donate $50</span>
+      </a>
+
+      <a href="#stripe-link-pending" class="donate-card">
+        <div class="donate-amount">$100</div>
+        <div class="donate-label">Fund a Teacher</div>
+        <div class="donate-desc">Sponsors teacher training for local educators</div>
+        <span class="donate-btn">Donate $100</span>
+      </a>
+
+      <a href="#stripe-link-pending" class="donate-card">
+        <div class="donate-amount" style="font-size: 2rem;">Any $</div>
+        <div class="donate-label">Give Any Amount</div>
+        <div class="donate-desc">Every dollar makes a difference in the lives of families across West Africa</div>
+        <span class="donate-btn">Donate</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Recurring Giving -->
+  <section class="section" style="padding-top: 0;">
+    <div class="recurring">
+      <h2>Make It Monthly</h2>
+      <p>Consistent support helps us plan ahead and sustain programs year-round. Stripe Payment Links support recurring donations &mdash; simply choose monthly when you check out. Your ongoing commitment means we can make long-term investments in communities that depend on us.</p>
+    </div>
+  </section>
+
+  <!-- Tax Deductible -->
+  <section class="section" style="padding-top: 0;">
+    <div class="tax-info">
+      <h2>Tax-Deductible Giving</h2>
+      <p>MACONA is a registered 501(c)(3) nonprofit organization. Your donation is tax-deductible to the extent allowed by law. You will receive a receipt from Stripe for your records. EIN: <em>[pending]</em></p>
+    </div>
+  </section>
+
+  <!-- Other Ways to Give -->
+  <section class="section" style="padding-top: 0;">
+    <h2 class="section-title">Other Ways to Give</h2>
+    <div class="other-ways">
+      <div class="other-ways-card">
+        <h3>Employer Matching via Benevity</h3>
+        <p>Many employers match charitable donations through Benevity. Search for <strong>MACONA</strong> in your company's giving portal to double your impact at no extra cost.</p>
+      </div>
+      <div class="other-ways-card">
+        <h3>Corporate &amp; Planned Giving</h3>
+        <p>For large gifts, corporate partnerships, or planned giving, contact us at <a href="mailto:info@macona.org">info@macona.org</a>. We'd love to discuss how we can work together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <div class="trust">
+    <div class="trust-item">
+      <div class="trust-icon">&#9989;</div>
+      <div class="trust-label">501(c)(3) Tax Exempt</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">&#10084;&#65039;</div>
+      <div class="trust-label">100% Volunteer-Run</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">&#128274;</div>
+      <div class="trust-label">Secure Payment via Stripe</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. MACONA is a 501(c)(3) nonprofit organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

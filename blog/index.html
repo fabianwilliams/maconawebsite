@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — MACONA</title>
+  <meta name="description" content="Stories, updates, and insights from MACONA — a 501(c)(3) nonprofit empowering communities in West Africa.">
+  <meta property="og:title" content="Blog — MACONA">
+  <meta property="og:description" content="Stories, updates, and insights from MACONA — empowering communities in West Africa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://macona.org/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Page Header ---- */
+    .page-header {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .page-header p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ---- Blog Cards ---- */
+    .blog-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+    .blog-card-date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .blog-card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .blog-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .blog-card .read-more {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .blog-card .read-more:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">MACONA</a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Blog</h1>
+    <p>Stories, updates, and insights from the MACONA community.</p>
+  </header>
+
+  <!-- Blog Cards -->
+  <section class="blog-grid">
+
+    <a href="/blog/your-next-hire-ai/" class="blog-card" style="text-decoration:none;">
+      <div class="blog-card-date">March 2026</div>
+      <h2>Your Next Hire Should Be an AI &mdash; Here&rsquo;s How a Nonprofit Did It in Two Weeks</h2>
+      <p>How MACONA went from a one-person operation to a team of two &mdash; without adding headcount. We deployed an autonomous AI executive assistant in under two weeks.</p>
+      <span class="read-more">Read More &rarr;</span>
+    </a>
+
+    <a href="/blog/spring-campaign/" class="blog-card" style="text-decoration:none;">
+      <div class="blog-card-date">Spring 2024</div>
+      <h2>Spring Giving Campaign 2024</h2>
+      <p>Join MACONA&rsquo;s annual spring campaign supporting education and community development in West Africa. Every dollar goes directly to programs.</p>
+      <span class="read-more">Read More &rarr;</span>
+    </a>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

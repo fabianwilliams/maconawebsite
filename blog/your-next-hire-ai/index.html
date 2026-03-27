@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Next Hire Should Be an AI — MACONA</title>
+  <meta name="description" content="How MACONA went from a one-person operation to a team of two — without adding headcount. We deployed an autonomous AI executive assistant in under two weeks.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Your Next Hire Should Be an AI — Here's How a Nonprofit Did It in Two Weeks">
+  <meta property="og:description" content="How MACONA went from a one-person operation to a team of two — without adding headcount. We deployed an autonomous AI executive assistant in under two weeks.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/your-next-hire-ai/">
+  <meta property="article:published_time" content="2026-03-01">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Your Next Hire Should Be an AI — Here's How a Nonprofit Did It in Two Weeks">
+  <meta name="twitter:description" content="How MACONA deployed an autonomous AI executive assistant in under two weeks.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Built By ---- */
+    .built-by {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">MACONA</a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">March 2026</div>
+    <h1>Your Next Hire Should Be an AI &mdash; Here&rsquo;s How a Nonprofit Did It in Two Weeks</h1>
+    <p class="subtitle">How MACONA went from a one-person operation to a team of two &mdash; without adding headcount.</p>
+  </header>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>What if you could hire someone who works 24/7, never calls in sick, manages your email, publishes your blog posts, runs your social media, drafts your newsletters, researches your prospects, and reports back every morning and evening &mdash; for less than the cost of a single software subscription?</p>
+
+    <p>That&rsquo;s not a pitch. That&rsquo;s what we built.</p>
+
+    <h2>The Problem Every Small Organization Faces</h2>
+
+    <p>MACONA is a 501(c)(3) nonprofit doing critical work in West Africa &mdash; school supplies, clean water, community development. Like most small organizations, the CEO wears every hat: grant writer, social media manager, email responder, newsletter editor, event planner, bookkeeper.</p>
+
+    <p>Sound familiar? Whether you run a nonprofit, a medical practice, a restaurant, a law firm, or a conference &mdash; if you have fewer than 10 people, someone on your team is drowning in operational work that keeps the lights on but doesn&rsquo;t move the mission forward.</p>
+
+    <p>The CEO&rsquo;s time should be spent on decisions, not data entry. On strategy, not scheduling. On relationships, not routine.</p>
+
+    <h2>What We Built: Mimi, the AI Executive Assistant</h2>
+
+    <p>We deployed Mimi &mdash; an autonomous AI agent running on dedicated hardware &mdash; in under two weeks. Not a chatbot. Not a template. A fully operational team member who executes real work across real systems, every single day.</p>
+
+    <h3>What Mimi Actually Does (Every Day, Without Being Asked)</h3>
+
+    <p>This isn&rsquo;t a tool the CEO has to remember to open. Mimi runs four autonomous programs on a daily schedule &mdash; Monday through Friday, weekends off:</p>
+
+    <p><strong>Morning Briefing (7:55 AM):</strong> Mimi checks email, reviews the calendar, flags anything urgent, and sends a summary to the CEO&rsquo;s phone before the day starts.</p>
+
+    <p><strong>Content &amp; Social Media:</strong> Mimi scouts for relevant news, upcoming awareness days, and content opportunities. She drafts social posts, publishes blog articles to WordPress, and maintains the LinkedIn and Twitter presence.</p>
+
+    <p><strong>Donor Research &amp; Outreach:</strong> Mimi researches corporate giving programs, finds named contacts at target companies, drafts personalized outreach emails, and stages them for the CEO&rsquo;s approval.</p>
+
+    <p><strong>End-of-Day Digest:</strong> Every evening, Mimi reports what she completed, what&rsquo;s pending, and what needs a human decision.</p>
+
+    <h3>How the CEO Communicates: A Text Message</h3>
+
+    <p>No dashboards to check. No apps to learn. The CEO communicates with Mimi through Signal &mdash; the same encrypted messenger she already uses. Need something done? Send a text. Want a status update? Ask. It&rsquo;s that simple.</p>
+
+    <h2>The Results</h2>
+
+    <p>In the first month of operation:</p>
+
+    <ul>
+      <li>LinkedIn followers increased as Mimi maintained a consistent posting cadence that no human volunteer could sustain</li>
+      <li>Donor inquiries went up &mdash; personalized outreach emails with real research behind them get responses</li>
+      <li>The CEO went from doing everything to making decisions &mdash; reviewing drafts, approving sends, steering strategy</li>
+      <li>The tech support volunteer just monitors dashboards and tweaks prompts. The system runs itself.</li>
+    </ul>
+
+    <p>The CEO&rsquo;s job changed overnight. She went from spending her mornings triaging email and her evenings writing social posts to spending her mornings reviewing Mimi&rsquo;s briefing and her evenings approving content Mimi already drafted.</p>
+
+    <p>That&rsquo;s the shift: from toil to decisions.</p>
+
+    <h2>This Isn&rsquo;t Just for Nonprofits</h2>
+
+    <p>The pattern works for any organization where one or two people are buried in operational overhead:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Who You Are</th>
+          <th>What the AI Handles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Solo medical practice</td>
+          <td>Appointment reminders, patient follow-ups, insurance pre-auth tracking</td>
+        </tr>
+        <tr>
+          <td>Restaurant owner</td>
+          <td>Vendor ordering, staff scheduling, social media, review responses</td>
+        </tr>
+        <tr>
+          <td>Law firm (small)</td>
+          <td>Client intake follow-ups, deadline tracking, billing reminders</td>
+        </tr>
+        <tr>
+          <td>Conference organizer</td>
+          <td>Speaker logistics, attendee comms, sponsor follow-ups</td>
+        </tr>
+        <tr>
+          <td>Professional services</td>
+          <td>Proposal follow-ups, project digests, client communication</td>
+        </tr>
+        <tr>
+          <td>Mom-and-pop retail</td>
+          <td>Inventory alerts, supplier reorders, customer follow-ups</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The hardware cost is a one-time purchase. The AI model runs through a standard API subscription. No cloud servers to manage. No IT department required. The data stays on your hardware.</p>
+
+    <h2>How It Works (Without the Jargon)</h2>
+
+    <p>The system has three pieces:</p>
+
+    <ol>
+      <li><strong>A brain</strong> &mdash; an organized knowledge base that contains everything the AI needs to know: who it works for, what it&rsquo;s allowed to do, and what tasks to run on schedule.</li>
+      <li><strong>A body</strong> &mdash; the gateway running on a dedicated machine that connects the AI to the outside world: email, social media, messaging, blogs, newsletters.</li>
+      <li><strong>A voice</strong> &mdash; whatever messaging app you already use. Signal, iMessage, WhatsApp. The CEO texts the AI like they&rsquo;d text a colleague.</li>
+    </ol>
+
+    <p>Set it up once. Teach it your operations. Let it run.</p>
+
+    <h2>What This Costs</h2>
+
+    <ul>
+      <li><strong>Hardware:</strong> $500&ndash;800 one-time (Mac Mini or refurbished mini-PC)</li>
+      <li><strong>AI model:</strong> $20&ndash;50/month (API usage)</li>
+      <li><strong>Setup:</strong> We build it, configure it, train it on your operations, and hand you the keys</li>
+      <li><strong>Ongoing:</strong> You own the hardware. You own the data. We&rsquo;re available for adjustments.</li>
+    </ul>
+
+    <p>Compare that to a part-time virtual assistant at $1,500&ndash;3,000/month.</p>
+
+    <h2>Ready to See It in Action?</h2>
+
+    <p>We&rsquo;re offering a service: we will build your AI executive assistant, deploy it on your hardware, and train it on your specific operations. Every deployment is custom because every organization is different. But the pattern is proven &mdash; MACONA went from zero to fully autonomous in under two weeks.</p>
+
+    <p>Want a 15-minute demo? Contact <a href="mailto:fabian@adotob.com">fabian@adotob.com</a> or visit <a href="https://adotob.com">adotob.com</a>.</p>
+
+  </article>
+
+  <!-- Built By -->
+  <div class="built-by">
+    Built by <a href="https://adotob.com">Adotob, LLC</a> &mdash; Columbia, Maryland. We build production software in days, not months.
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
