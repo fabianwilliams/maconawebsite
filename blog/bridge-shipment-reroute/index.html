@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When the Bridge Fell, Hope Found Another Route — MACONA</title>
+  <meta name="description" content="How MACONA rerouted a shipment after the Francis Scott Key Bridge collapse — and delivered every last shirt.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="When the Bridge Fell, Hope Found Another Route — MACONA">
+  <meta property="og:description" content="How MACONA rerouted a shipment after the Francis Scott Key Bridge collapse — and delivered every last shirt.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/bridge-shipment-reroute/">
+  <meta property="article:published_time" content="2026-03-01">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="When the Bridge Fell, Hope Found Another Route — MACONA">
+  <meta name="twitter:description" content="How MACONA rerouted a shipment after the Francis Scott Key Bridge collapse — and delivered every last shirt.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">March 2026</div>
+    <h1>When the Bridge Fell, Hope Found Another Route</h1>
+    <p class="subtitle">How MACONA rerouted a shipment after the Francis Scott Key Bridge collapse &mdash; and delivered every last shirt.</p>
+  </header>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>On March 26, 2024, the Francis Scott Key Bridge in Baltimore collapsed after a container ship struck one of its support columns. Six construction workers lost their lives. The Port of Baltimore &mdash; one of the busiest on the East Coast &mdash; shut down overnight.</p>
+
+    <p>For MACONA, the timing could not have been worse. A pallet of donated clothing, school supplies, and hygiene kits was staged at a warehouse less than two miles from the port, scheduled to ship that same week. When the bridge fell, so did our logistics plan.</p>
+
+    <p>But the shipment still had to move. Students in Dakar and Bamako were counting on it.</p>
+
+    <h2>48 Hours of Coordination</h2>
+
+    <h3>Hour 1: The Call</h3>
+
+    <p>The news broke before dawn. By 7 AM, our shipping contact confirmed what we feared: the port was closed indefinitely. No vessels in, no vessels out. Our container was landlocked.</p>
+
+    <h3>Hour 6: Reroute Options</h3>
+
+    <p>We had three choices: wait for the port to reopen (timeline unknown), truck the pallet to another East Coast port (expensive), or break the shipment into smaller parcels and use a different carrier entirely. We chose door number two &mdash; truck to the Port of Norfolk, Virginia.</p>
+
+    <h3>Hour 17: Volunteers Mobilize</h3>
+
+    <p>A volunteer with a box truck offered to drive the load from Laurel, Maryland to Norfolk &mdash; a four-hour haul. Two more volunteers met him at the Norfolk terminal to help with the handoff. No one asked for gas money. They just showed up.</p>
+
+    <h3>Hour 36: Container Loaded</h3>
+
+    <p>The shipment was loaded onto a vessel bound for Dakar. It left Norfolk 48 hours after the bridge collapse. Not a single item was lost. Not a single shirt left behind.</p>
+
+    <h2>Community Wins</h2>
+
+    <p>The bridge collapse didn&rsquo;t just test our logistics &mdash; it galvanized the community.</p>
+
+    <h3>MVP Shirt Drive</h3>
+
+    <p>Microsoft MVPs who had already donated conference shirts rallied again. Word spread through the MVP community that the shipment was in jeopardy, and within days, additional donations arrived at the Laurel warehouse to fill gaps in the rerouted container.</p>
+
+    <h3>Hydration Kits in 24 Hours</h3>
+
+    <p>A local church group assembled 40 hydration kits &mdash; reusable water bottles, water purification tablets, and oral rehydration packets &mdash; in a single evening. They delivered them to the warehouse before the truck left for Norfolk.</p>
+
+    <h3>Western Union Boost</h3>
+
+    <p>Diaspora families who normally send money home through Western Union redirected a portion of their March remittances to MACONA&rsquo;s shipping fund. That influx covered the unexpected trucking costs to Norfolk and the terminal handling fees.</p>
+
+    <h2>Field Notes: Arrival in Dakar</h2>
+
+    <p>Three weeks after the bridge fell, the container arrived in Dakar. The local MACONA team unloaded 693 clothing items, 210 hygiene kits, school supplies for four classrooms, and the 40 hydration kits that were assembled the night the volunteer drove to Norfolk.</p>
+
+    <p>Nothing was damaged. Nothing was missing. The reroute added cost, but it didn&rsquo;t subtract a single item from the delivery.</p>
+
+    <p>When a bridge falls, you find another route. That is what community means.</p>
+
+    <h2>Help Us Keep Moving</h2>
+
+    <p>Every shipment costs money &mdash; and surprises like a bridge collapse make it cost more. Your donation goes directly to shipping, logistics, and supplies.</p>
+
+    <ul>
+      <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; covers packing materials for one box</li>
+      <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; funds local transport from port to school</li>
+      <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; covers emergency rerouting costs</li>
+      <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; sponsors a full pallet of supplies</li>
+    </ul>
+
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now</a>
+    </p>
+
+    <h2>Double Your Impact</h2>
+
+    <p>If your employer offers matching gifts, search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 84-0933813688) in Benevity. Every matched dollar stretches further &mdash; especially when logistics surprises hit.</p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

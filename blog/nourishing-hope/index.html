@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nourishing Hope — MACONA</title>
+  <meta name="description" content="From a packing night in Laurel to a distribution line in Bamako — the full arc of MACONA's food program.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Nourishing Hope: What 648 Units of Food Look Like on Both Sides of the Atlantic">
+  <meta property="og:description" content="From a packing night in Laurel to a distribution line in Bamako — the full arc of MACONA's food program.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/nourishing-hope/">
+  <meta property="article:published_time" content="2026-03-01">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nourishing Hope: What 648 Units of Food Look Like on Both Sides of the Atlantic">
+  <meta name="twitter:description" content="From a packing night in Laurel to a distribution line in Bamako — the full arc of MACONA's food program.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">March 2026</div>
+    <h1>Nourishing Hope: What 648 Units of Food Look Like on Both Sides of the Atlantic</h1>
+    <p class="subtitle">From a packing night in Laurel to a distribution line in Bamako &mdash; the full arc of MACONA&rsquo;s food program.</p>
+  </header>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>Food security is not abstract when you are packing rice into bags at 9 PM on a Tuesday in a Laurel, Maryland warehouse. It is measured in units: cans, bags, packets, buckets. And every unit has a name attached to it on the other end &mdash; a family, a child, a school.</p>
+
+    <p>This is the story of 648 units of food, from packing night to distribution day.</p>
+
+    <h2>Part 1: Baltimore Packing Night</h2>
+
+    <h3>Inventory</h3>
+
+    <p>The warehouse floor was covered in donated goods: bags of rice, canned vegetables, powdered milk, cooking oil, dried beans, and oral rehydration salts. Each category had a station. Each station had a volunteer.</p>
+
+    <p>The count before packing began: 648 individual food units, sourced from bulk purchases, community food drives, and corporate donations.</p>
+
+    <h3>Volunteers</h3>
+
+    <p>Fourteen volunteers showed up on a Tuesday evening. Some were regulars. Some were first-timers who saw a social media post and decided to help. A few brought their teenagers. Everyone got gloves, a station assignment, and a target count.</p>
+
+    <h3>Quality Control</h3>
+
+    <p>Every item was checked before it went into a bag. Expiration dates verified. Damaged packaging pulled. Dented cans set aside. The rule is simple: if you wouldn&rsquo;t feed it to your own family, it doesn&rsquo;t ship.</p>
+
+    <p>By 11 PM, the floor was clear. Every unit was sorted, bagged, labeled, and staged for loading.</p>
+
+    <h2>Part 2: Funding the Hydration Gap</h2>
+
+    <p>Food gets the most attention, but water is the silent gap. Families receiving food bags often lack access to clean drinking water. Children who eat well but drink contaminated water still get sick. The hydration gap undermines everything else.</p>
+
+    <h3>Diaspora Remitters</h3>
+
+    <p>MACONA&rsquo;s donor base includes West African diaspora families in the Baltimore-Washington corridor who already send money home monthly. Many redirected a portion of their remittances to fund hydration supplies &mdash; water purification tablets, reusable bottles, and oral rehydration packets.</p>
+
+    <h3>Corporate Donors</h3>
+
+    <p>Corporate matching through Benevity covered the cost of two hydration hubs &mdash; portable water filtration stations that serve an entire school. At $100 per hub, the cost is modest. The impact is not.</p>
+
+    <h2>Part 3: Arrival in Bamako</h2>
+
+    <p>The shipment arrived in Bamako four weeks after packing night. The local MACONA team &mdash; three coordinators and a rotating group of community volunteers &mdash; handled distribution over two days.</p>
+
+    <p>What 648 units of food looks like on the ground:</p>
+
+    <ul>
+      <li><strong>210 family bags</strong> &mdash; rice, beans, cooking oil, powdered milk, and canned vegetables. Each bag feeds a family of four for approximately one week.</li>
+      <li><strong>62 infant kits</strong> &mdash; powdered formula, oral rehydration salts, and nutrient supplements for children under two.</li>
+      <li><strong>40 hygiene buckets</strong> &mdash; soap, toothbrushes, sanitary pads, and hand sanitizer. Hygiene and food go together.</li>
+      <li><strong>2 hydration hubs</strong> &mdash; portable water filtration stations deployed at two partner schools. Each hub serves up to 200 students daily.</li>
+    </ul>
+
+    <h2>Aminata&rsquo;s Story</h2>
+
+    <p>Aminata is nine years old and attends one of MACONA&rsquo;s partner schools in Bamako. Before the delivery, her family rationed meals to two per day. Her mother walked 40 minutes each way to the nearest market, buying what she could afford that week.</p>
+
+    <p>The family bag Aminata&rsquo;s mother received contained enough food for a full week. The hydration hub at her school meant Aminata no longer had to bring water from home &mdash; she could drink clean, filtered water at school. Her attendance improved. Her teacher noticed she was more alert in the afternoon.</p>
+
+    <p>One bag. One hub. One child who shows up ready to learn.</p>
+
+    <h2>How You Can Keep the Pipeline Moving</h2>
+
+    <h3>Give</h3>
+
+    <ul>
+      <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; packs 5 family food bags</li>
+      <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; funds 10 infant nutrition kits</li>
+      <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; deploys one hydration hub at a school</li>
+      <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; sponsors an entire distribution day</li>
+    </ul>
+
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now</a>
+    </p>
+
+    <h3>File a Match</h3>
+
+    <p>If your employer offers matching gifts, search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 84-0933813688) in Benevity. Corporate matches funded both hydration hubs in this shipment.</p>
+
+    <h3>Host a Pantry Pop-Up</h3>
+
+    <p>Organize a food collection at your workplace, church, or community center. We provide the list of needed items and the shipping logistics. You provide the community.</p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

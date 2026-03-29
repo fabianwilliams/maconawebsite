@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Tees with a Purpose — MACONA</title>
+  <meta name="description" content="How 693 shirts from Microsoft MVPs became uniforms for students in Bamako and Dakar.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Tech Tees with a Purpose: Turning Conference Swag into Classroom Confidence">
+  <meta property="og:description" content="How 693 shirts from Microsoft MVPs became uniforms for students in Bamako and Dakar.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/tech-tees-with-purpose/">
+  <meta property="article:published_time" content="2026-03-01">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tech Tees with a Purpose: Turning Conference Swag into Classroom Confidence">
+  <meta name="twitter:description" content="How 693 shirts from Microsoft MVPs became uniforms for students in Bamako and Dakar.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">March 2026</div>
+    <h1>Tech Tees with a Purpose: Turning Conference Swag into Classroom Confidence</h1>
+    <p class="subtitle">How 693 shirts from Microsoft MVPs became uniforms for students in Bamako and Dakar.</p>
+  </header>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>Every year, tech conferences hand out thousands of t-shirts. Most end up in dresser drawers, donation bins, or landfills. At MACONA, we saw a different destination: classrooms in West Africa where a clean shirt is not swag &mdash; it&rsquo;s a uniform.</p>
+
+    <h2>From Expo Hall to MACONA Warehouse</h2>
+
+    <p>It started at the Microsoft MVP Summit. A handful of MVPs asked a simple question: &ldquo;What if we collected the shirts people don&rsquo;t want and sent them somewhere they&rsquo;re needed?&rdquo;</p>
+
+    <p>Within days, collection boxes appeared at the conference venue. Attendees dropped off brand-new shirts from vendor booths, duplicates from swag bags, and gently worn tees they&rsquo;d brought from home. By the end of the event, we had hundreds of shirts in every size.</p>
+
+    <h3>Volunteer Logistics in Laurel</h3>
+
+    <p>The shirts arrived at MACONA&rsquo;s staging warehouse in Laurel, Maryland, in boxes, bags, and the occasional suitcase. Volunteers sorted them by size, separated children&rsquo;s sizes from adult sizes, and flagged anything that wasn&rsquo;t in wearable condition.</p>
+
+    <h3>Quality Control by Novlet</h3>
+
+    <p>Novlet, a MACONA volunteer coordinator, ran quality control. Every shirt was inspected: no stains, no tears, no offensive graphics. Tech logos were fine &mdash; a kid in Bamako wearing an Azure shirt is just as cool as a kid in Seattle wearing one. But anything worn out or inappropriate was pulled.</p>
+
+    <p>Final count: 693 items cleared for shipment.</p>
+
+    <h2>Why Clothes Matter as Much as Laptops</h2>
+
+    <p>In many West African schools, students are expected to arrive in clean, presentable clothing. Families who can&rsquo;t afford uniforms or regular clothing changes often keep children home. It&rsquo;s not a dress code problem &mdash; it&rsquo;s an attendance problem.</p>
+
+    <p>A clean shirt means a child shows up. Showing up means learning. Learning means opportunity. The chain starts with something as simple as a t-shirt.</p>
+
+    <p>When we pair clothing drives with school supply deliveries, attendance in partner schools rises measurably. Teachers report fewer absences in the weeks following a MACONA delivery. The shirts aren&rsquo;t charity &mdash; they&rsquo;re infrastructure.</p>
+
+    <h2>How Your Company Can Join</h2>
+
+    <h3>Host a Drive</h3>
+
+    <p>If your company attends conferences, hosts events, or simply has a closet full of branded shirts nobody wears, organize a collection. We provide shipping labels and logistics. You provide the shirts.</p>
+
+    <h3>Log It in Benevity</h3>
+
+    <p>Many employers match volunteer hours and donations through Benevity. Search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 84-0933813688) and log your hours or donation. Your company&rsquo;s match doubles the impact.</p>
+
+    <h3>Cover Shipping via Stripe</h3>
+
+    <p>Collecting shirts is free. Shipping them across the Atlantic is not. A $50 donation covers the freight cost for one box of 30 shirts. A $250 donation sponsors an entire pallet.</p>
+
+    <h2>March 2024 Snapshot</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Items before MVP drive</td>
+          <td>231</td>
+        </tr>
+        <tr>
+          <td>Items after MVP drive</td>
+          <td>693 (tripled)</td>
+        </tr>
+        <tr>
+          <td>Benevity matches received</td>
+          <td>$1,200</td>
+        </tr>
+        <tr>
+          <td>Volunteer hours logged</td>
+          <td>40+</td>
+        </tr>
+        <tr>
+          <td>Destination schools</td>
+          <td>4 (Bamako &amp; Dakar)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>What Happens Next</h2>
+
+    <p>The 2024 shipment is delivered. But the pipeline never stops. We are already collecting for the next cycle. Conference season runs year-round, and every event is an opportunity to turn surplus into impact.</p>
+
+    <p>Our goal: 1,000 items for the next shipment. We are at 693. Help us close the gap.</p>
+
+    <h2>Give Today</h2>
+
+    <ul>
+      <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; ships one box of shirts to Dakar</li>
+      <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; covers freight for 30 shirts</li>
+      <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; sponsors a full classroom set</li>
+      <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; funds a complete pallet</li>
+    </ul>
+
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now</a>
+    </p>
+
+    <p>If your employer offers matching gifts, search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 84-0933813688) in Benevity. Every matched dollar stretches further.</p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
