@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No One Is Too Young: How Atholton High School Students Made Global Impact — MACONA</title>
+  <meta name="description" content="Atholton High School students organized a donation drive that collected hundreds of items for communities in Africa, Baltimore, and beyond.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="No One Is Too Young: How Atholton High School Students Made Global Impact">
+  <meta property="og:description" content="Atholton High School students organized a donation drive that collected hundreds of items for communities in Africa, Baltimore, and beyond.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/atholton-high-school-students-macona-impact/">
+  <meta property="og:image" content="https://macona.org/img/blog/AtholtonHS_MimiWilliamsTellClassaboutMacona.jpg">
+  <meta property="article:published_time" content="2026-04-08">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No One Is Too Young: How Atholton High School Students Made Global Impact">
+  <meta name="twitter:description" content="Atholton High School students organized a donation drive that collected hundreds of items for communities in Africa, Baltimore, and beyond.">
+  <meta name="twitter:image" content="https://macona.org/img/blog/AtholtonHS_MimiWilliamsTellClassaboutMacona.jpg">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    /* ---- Donation Tiers ---- */
+    .donation-tiers {
+      background: var(--accent-glow);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+    .donation-tiers h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">April 8, 2026</div>
+    <h1>No One Is Too Young: How Atholton High School Students Made Global Impact</h1>
+    <p class="subtitle">Atholton High School students organized a donation drive that collected hundreds of items for communities in Africa, Baltimore, and beyond.</p>
+  </header>
+
+  <!-- Hero Image -->
+  <div style="max-width:720px; margin:0 auto; padding:0 1.5rem;">
+    <img src="/img/blog/AtholtonHS_MimiWilliamsTellClassaboutMacona.jpg" alt="Mimi Williams speaking to students at Atholton High School about MACONA's mission" style="width:100%; max-width:720px; display:block; margin:0 auto 2rem; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>When a group of students at Atholton High School in Columbia, Maryland set out to organize a class project, they could have chosen something simple. A bake sale. A poster campaign. Instead, they chose to change lives&mdash;across their neighborhood, across Baltimore, and across the ocean.</p>
+
+    <p>What started as a classroom assignment became one of the most impactful student-led donation drives MACONA has partnered with this year. And it proved something we have always believed: <strong>no one is too young to make a difference.</strong></p>
+
+    <h2>A Classroom With a Mission</h2>
+
+    <p>The students were tasked with designing a community service project that would create real, measurable impact. After researching nonprofits, they connected with MACONA and learned about the communities we serve&mdash;families in sub-Saharan Africa who lack basic necessities, and underserved neighborhoods in the Baltimore metro area.</p>
+
+    <img src="/img/blog/AtholtonHS_StudentsSortingDonations.jpg" alt="Atholton High School students sorting donated clothing and supplies" style="width:100%; max-width:720px; display:block; margin:1.5rem auto; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+
+    <p>They organized collection stations throughout the school, rallied classmates and families, and ran the drive for several weeks with flyers, morning announcements, and hallway outreach. Their energy was infectious.</p>
+
+    <h2>Mimi Williams Visits the Classroom</h2>
+
+    <p>MACONA CEO Mimi Williams visited Atholton High School to speak with the students about the organization's work and the impact their donations would have. She shared stories of families who had received clothing shipments in West Africa, children who wore their first pair of new shoes to school, and communities in Baltimore where donated books had stocked an entire after-school reading program.</p>
+
+    <img src="/img/blog/AtholtonHS_MimiWithStudents.jpg" alt="Mimi Williams with Atholton High School students after the donation drive presentation" style="width:100%; max-width:720px; display:block; margin:1.5rem auto; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+
+    <p>&ldquo;When I walked into that classroom and saw what these young people had accomplished, I was overwhelmed,&rdquo; said Williams. &ldquo;They didn't just collect items&mdash;they organized, they motivated their peers, they tracked everything. These students ran this like a real operation, and the results speak for themselves.&rdquo;</p>
+
+    <h2>The Numbers Tell the Story</h2>
+
+    <p>By the time the drive concluded, the students had collected an extraordinary volume of donations:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Destination</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Articles of clothing</td>
+          <td><strong>127</strong></td>
+          <td>Africa &amp; Baltimore charities</td>
+        </tr>
+        <tr>
+          <td>Pairs of shoes</td>
+          <td><strong>15</strong></td>
+          <td>Africa &amp; Goodwill</td>
+        </tr>
+        <tr>
+          <td>Books</td>
+          <td><strong>100+</strong></td>
+          <td>Baltimore after-school programs</td>
+        </tr>
+        <tr>
+          <td>School supplies</td>
+          <td><strong>1 box</strong></td>
+          <td>Africa &amp; local schools</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Every item was sorted, categorized, and prepared for distribution by the students themselves. Clothing and shoes were divided between shipments bound for communities in Africa and donations to Baltimore-area charities and Goodwill. Books were routed to local after-school programs. School supplies were split between international and local recipients.</p>
+
+    <img src="/img/blog/AtholtonHS_DonationBoxes.jpg" alt="Boxes of donated clothing, shoes, books, and supplies collected by Atholton High School students" style="width:100%; max-width:720px; display:block; margin:1.5rem auto; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+
+    <h2>Where the Donations Went</h2>
+
+    <p>MACONA's distribution model ensures every donated item reaches someone who needs it. The Atholton donations were channeled through three pathways:</p>
+
+    <ul>
+      <li><strong>Africa:</strong> Clothing, shoes, and school supplies joined MACONA's next consolidated shipment to West Africa, going directly to families identified by local coordinators.</li>
+      <li><strong>Baltimore charities:</strong> Clothing was distributed through MACONA's local charity partners to families in underserved neighborhoods.</li>
+      <li><strong>Goodwill:</strong> Items in good condition that didn't fit partner community needs were donated to Goodwill, ensuring nothing went to waste.</li>
+    </ul>
+
+    <!-- Mid-Article CTA -->
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Support Drives Like This &mdash; Donate Now</a>
+    </p>
+
+    <h2>Why Student Partnerships Matter</h2>
+
+    <p>Student-led drives hold a special place in MACONA's mission. When young people take ownership of a charitable project, they build empathy, organizational skills, and a sense of global citizenship that stays with them for life.</p>
+
+    <p>The Atholton students didn't just meet a class requirement. They experienced what it means to see a need, design a response, and execute a plan. That is leadership, and exactly the kind of partnership MACONA seeks to cultivate.</p>
+
+    <img src="/img/blog/AtholtonHS_ClassGroupPhoto.jpg" alt="Group photo of Atholton High School class with their collected donations" style="width:100%; max-width:720px; display:block; margin:1.5rem auto; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+
+    <h2>How Your School Can Get Involved</h2>
+
+    <p>If you are a teacher, administrator, or student who wants to organize a donation drive with MACONA, we make it easy. We provide collection guidelines, pick up donated items, and handle all distribution logistics. Reach out at <a href="/contact/">macona.org/contact</a> to start a conversation.</p>
+
+    <h2>Every Item Counts. Every Person Counts.</h2>
+
+    <p>One hundred twenty-seven articles of clothing. Fifteen pairs of shoes. Over one hundred books. One box of school supplies. These are not just numbers&mdash;they are lifelines. A warm jacket for a child in Cameroon. A pair of shoes for a teenager starting a new school year in Baltimore. A stack of books for a reading program that had empty shelves.</p>
+
+    <p>The students at Atholton High School proved that impact is not about scale. It is about intention, effort, and follow-through. And with MACONA as a partner, every donation&mdash;no matter how small&mdash;reaches someone who needs it.</p>
+
+    <!-- Donation Tiers -->
+    <div class="donation-tiers">
+      <h3>Your Gift at Work</h3>
+      <ul>
+        <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; packs 5 family food bags</li>
+        <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; funds 10 infant nutrition kits</li>
+        <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; deploys one hydration hub at a school</li>
+        <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; sponsors an entire distribution day</li>
+      </ul>
+    </div>
+
+    <!-- Benevity Matching Gift -->
+    <h3>Double Your Impact</h3>
+
+    <p>If your employer offers matching gifts, search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 93-3813688) in Benevity. Corporate matches have funded hydration hubs, school supplies, and full distribution days.</p>
+
+    <!-- End CTA -->
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate to MACONA Today</a>
+    </p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
