@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://macona.org/sitemap.xml
+
+# Agent-readable content
+# See llms.txt for AI agent navigation
