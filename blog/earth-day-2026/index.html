@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Earth Gives Us Everything &mdash; We Give It Back Through Clean Water &mdash; MACONA</title>
+  <meta name="description" content="Earth Day 2026: How MACONA's hydration hubs, sustainable packaging, and community-first logistics reduce waste and protect the environment while delivering essential supplies to West Africa.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="The Earth Gives Us Everything &mdash; We Give It Back Through Clean Water">
+  <meta property="og:description" content="Earth Day 2026: How MACONA's hydration hubs and sustainable logistics protect the environment while delivering essential supplies to West Africa.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/earth-day-2026/">
+  <meta property="og:image" content="/img/blog/854_5b_WaterOnPallet-scaled.jpg">
+  <meta property="article:published_time" content="2026-04-22">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Earth Gives Us Everything &mdash; We Give It Back Through Clean Water">
+  <meta name="twitter:description" content="Earth Day 2026: How MACONA delivers clean water and essential supplies to West Africa through sustainable, community-first logistics.">
+  <meta name="twitter:image" content="/img/blog/854_5b_WaterOnPallet-scaled.jpg">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .article-body figure {
+      margin: 2rem 0;
+    }
+    .article-body figure img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .article-body figcaption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">April 22, 2026 &mdash; Earth Day</div>
+    <h1>The Earth Gives Us Everything &mdash; We Give It Back Through Clean Water</h1>
+    <p class="subtitle">Earth Day is not a calendar event for MACONA. It is what we do every time we ship water before clothing, every time we choose reusable over disposable, and every time a hydration hub replaces 10,000 plastic bottles.</p>
+  </header>
+
+  <!-- Hero Image -->
+  <div style="max-width:720px; margin:0 auto; padding:0 1.5rem;">
+    <img src="/img/blog/854_5b_WaterOnPallet-scaled.jpg" alt="MACONA CEO Mimi Williams preparing pallets of clean water bottles in warehouse for shipment to West Africa" style="width:100%; max-width:720px; display:block; margin:0 auto 2rem; border-radius:8px; border:1px solid var(--border);" loading="lazy">
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>Every April 22, the world celebrates Earth Day. For many organizations, it is a moment to post a green graphic and move on. At MACONA, Earth Day is a checkpoint &mdash; a chance to measure whether our operations are actually reducing harm to the planet while serving the communities that depend on it most.</p>
+
+    <p>The communities MACONA serves in West Africa are among the most climate-vulnerable on the planet. Rising temperatures, unpredictable rainfall, and contaminated water sources are not hypothetical risks. They are daily realities for families in Bamako, Mali, and across the Sahel region. When we ship supplies, we are not just addressing poverty &mdash; we are addressing the consequences of environmental degradation that those communities did not cause.</p>
+
+    <h2>Clean Water Is an Environmental Act</h2>
+
+    <p>MACONA&rsquo;s hydration hubs &mdash; portable water filtration stations deployed at every partner school &mdash; are both a health intervention and an environmental one.</p>
+
+    <p>Before a hydration hub arrives, a school of 200 students relies on single-use plastic sachets of water. Each student uses 2&ndash;3 sachets per day. That is 400&ndash;600 plastic sachets going into the ground every single school day. Over a year, one school generates more than 100,000 pieces of plastic waste &mdash; in communities with no recycling infrastructure.</p>
+
+    <p>One hydration hub eliminates all of it. Gravity-fed filtration. Reusable cups. No electricity, no plastic, no waste.</p>
+
+    <p style="text-align: center; margin: 2.5rem 0;">
+      <a href="https://go.macona.org/donate-100" class="cta-button">Fund a Hydration Hub &mdash; $100</a>
+    </p>
+
+    <h2>How Your Donation Protects the Earth</h2>
+
+    <p>Every dollar to MACONA does double duty. It serves a child and it reduces environmental harm. Here is what specific amounts deliver:</p>
+
+    <ul>
+      <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; provides reusable water bottles for one classroom, replacing 6,000 plastic sachets per year</li>
+      <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; supplies water purification tablets for one school for a semester, keeping 15,000 sachets out of the ground</li>
+      <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; deploys one hydration hub serving 200 students daily &mdash; zero plastic, zero electricity, zero waste</li>
+      <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; funds hydration infrastructure for an entire school campus plus a community washing station</li>
+    </ul>
+
+    <h2>Sustainable Logistics</h2>
+
+    <figure>
+      <img src="/img/blog/1235_JustTheDonationsOverGateandBanner.jpg" alt="MACONA donations including food, clothing, and cooking oil ready for distribution under the MACONA banner in Mali" loading="lazy">
+      <figcaption>Donations arrive consolidated &mdash; food, clothing, and supplies travel together to minimize shipments and reduce carbon footprint</figcaption>
+    </figure>
+
+    <p>MACONA does not ship air. Every container that leaves the United States is packed to capacity. Clothing, school supplies, food, and water equipment travel together in consolidated shipments. This is not just cost efficiency &mdash; it is carbon efficiency. Fewer containers means fewer miles at sea, less fuel burned, and a smaller footprint per item delivered.</p>
+
+    <p>On the ground in Mali, deliveries are coordinated so that one vehicle visit covers an entire school &mdash; water, uniforms, food, and supplies in a single trip. Our local team schedules distribution days around community availability so that families do not make multiple trips to collect items. Less travel for families means less fuel, less time lost, and less strain on roads that are already fragile.</p>
+
+    <h2>The Numbers</h2>
+
+    <p>In the past year, MACONA&rsquo;s operations have delivered measurable environmental impact alongside humanitarian results:</p>
+
+    <ul>
+      <li><strong>Hydration hubs deployed:</strong> one at every partner school receiving deliveries</li>
+      <li><strong>Estimated plastic sachets avoided:</strong> 100,000+ per school per year</li>
+      <li><strong>Consolidated shipments:</strong> every container packed to capacity, reducing per-item shipping carbon</li>
+      <li><strong>Reusable cups distributed:</strong> color-coded by classroom to prevent sharing and eliminate disposables</li>
+      <li><strong>Items delivered in 2025:</strong> 1,000+ to 3 partner schools in Bamako, Mali</li>
+    </ul>
+
+    <h2>What Earth Day Means to Mimi Williams</h2>
+
+    <figure>
+      <img src="/img/blog/1241_staffbothsmileclothesbanner.jpg" alt="MACONA team members smiling in front of the MACONA banner with donated clothing ready for distribution" loading="lazy">
+      <figcaption>The MACONA team in Mali &mdash; every delivery is a chance to leave the community better than we found it</figcaption>
+    </figure>
+
+    <p>I grew up in West Africa. The rivers I played in as a child are not the same rivers today. The rainy season comes later. The dry season lasts longer. Families that farmed for generations are watching their soil turn to dust.</p>
+
+    <p>When MACONA ships a hydration hub, we are not just giving a school clean water. We are telling those children that someone sees what is happening to their environment and refuses to make it worse. Every reusable cup that replaces a plastic sachet is a small act of respect for the earth that sustains them.</p>
+
+    <p>Earth Day is every delivery day at MACONA.</p>
+
+    <p>&mdash; Mariam &ldquo;Mimi&rdquo; Williams, Founder &amp; CEO, MACONA</p>
+
+    <p style="text-align: center; margin: 2.5rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now &mdash; Double Your Impact Through Benevity</a>
+    </p>
+
+    <h2>Double Your Earth Day Gift</h2>
+
+    <p>If your employer uses Benevity for employee giving, your donation to MACONA can be matched by your company&rsquo;s corporate giving program. That means a $100 hydration hub becomes two. A $250 campus deployment becomes two campuses.</p>
+
+    <p>Search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 93-3813688) in your company&rsquo;s Benevity portal. Over 72 companies already have MACONA registered as a cause, including Microsoft, Apple, Google, NVIDIA, Intel, Salesforce, and dozens more.</p>
+
+    <p>Not sure if your company is on the list? <a href="/contact/">Contact us</a> and we will help you find out.</p>
+
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Give Today</a>
+    </p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
