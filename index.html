@@ -706,7 +706,50 @@
         font-size: 1.6rem;
       }
     }
-  </style>
+  
+    .footer-newsletter {
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 1rem;
+    }
+    .footer-newsletter h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: var(--accent2, #d4a373);
+    }
+    .footer-newsletter p {
+      margin: 0 0 1rem;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 420px;
+    }
+    .newsletter-form input[type=email] {
+      flex: 1;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      color: inherit;
+      font-size: 0.95rem;
+    }
+    .newsletter-form button {
+      padding: 0.6rem 1.2rem;
+      border: 0;
+      border-radius: 6px;
+      background: var(--accent, #2d6a4f);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .newsletter-form button:hover { filter: brightness(1.1); }
+    @media (max-width: 600px) {
+      .newsletter-form { flex-direction: column; }
+    }
+</style>
 </head>
 <body>
 
@@ -856,6 +899,25 @@
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
+      </div>
+      
+      <div class="footer-newsletter">
+        <h3>Stay in touch</h3>
+        <p>One short update when there's news. Never spam.</p>
+        <!--
+          Newsletter signup. To wire to Brevo, replace `action` with the
+          hosted form URL from Brevo (Settings → Subscription Forms →
+          "Get HTML code" → copy the form action) and remove the mailto
+          fallback. Until then this routes to contact@macona.org so
+          subscribe requests aren't lost.
+        -->
+        <form class="newsletter-form"
+              action="mailto:contact@macona.org?subject=Subscribe%20me%20to%20the%20MACONA%20newsletter"
+              method="POST"
+              enctype="text/plain">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Mimi African Charities of North America (MACONA). All rights reserved.</p>
