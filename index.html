@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MACONA — Together we can build a world where all youth are cared for, safe, and never go to bed hungry</title>
+  <title>MACONA â€” Together we can build a world where all youth are cared for, safe, and never go to bed hungry</title>
   <meta name="description" content="Mimi African Charities of North America (MACONA) is a 501(c)(3) nonprofit dedicated to providing relief and support for children and women in Africa and the Greater Baltimore Area through healthcare, education, and nutrition.">
   <link rel="icon" href="/favicon.png">
 
   <!-- OG Meta Tags -->
-  <meta property="og:title" content="MACONA — Mimi African Charities of North America">
+  <meta property="og:title" content="MACONA â€” Mimi African Charities of North America">
   <meta property="og:description" content="501(c)(3) nonprofit providing relief and support for children and women in Africa and the Greater Baltimore Area. 100% volunteer-driven.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org">
@@ -17,7 +17,7 @@
   {
     "@context": "https://schema.org",
     "@type": "NGO",
-    "name": "MACONA — Mimi African Charities of North America",
+    "name": "MACONA â€” Mimi African Charities of North America",
     "alternateName": "MACONA",
     "url": "https://macona.org",
     "logo": "https://macona.org/favicon.png",
@@ -789,6 +789,69 @@
     </div>
   </section>
 
+    <!-- ========== Live Shipment Tracker ========== -->
+  <style>
+    .shipment-feature {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #e8f3ed 0%, #fafaf9 100%);
+      border-bottom: 1px solid #e5e5e0;
+    }
+    .shipment-feature-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .shipment-feature-img img {
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(45,106,79,0.18);
+      width: 100%;
+      display: block;
+    }
+    .shipment-feature .section-label {
+      color: #2d6a4f;
+    }
+    .shipment-feature-badge {
+      display: inline-block;
+      background: #2d6a4f;
+      color: #fff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    @media (max-width: 768px) {
+      .shipment-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .shipment-feature-img {
+        order: -1;
+      }
+    }
+  </style>
+  <section class="shipment-feature">
+    <div class="section-inner">
+      <div class="shipment-feature-grid">
+        <div>
+          <p class="section-label"><span class="shipment-feature-badge">NEW</span>Live Tracker</p>
+          <h2 class="section-title">See where your donations are right now</h2>
+          <p class="section-subtitle">Every MACONA shipment carries GPS trackers. Follow the journey from Maryland to Mali &mdash; bags packed, container handed off in Philly, surprise port pings from Cadiz and Las Palmas, volunteer pickup in Bamako. Real photos, real timestamps, real receipts.</p>
+          <div class="hero-buttons" style="margin-top: 1.5rem;">
+            <a href="/shipments/" class="btn btn-primary">View All Shipments</a>
+            <a href="/shipments/ship_2026-05_philly-mali/" class="btn btn-outline">Current: Philly to Mali</a>
+          </div>
+        </div>
+        <div class="shipment-feature-img">
+          <img src="/img/blog/2026-05-05_PhillyShipment_Hero_WorkerLoading.jpg" alt="Philadelphia container yard handoff">
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ========== Impact Stats ========== -->
   <section>
     <div class="section-inner text-center">
@@ -906,8 +969,8 @@
         <p>One short update when there's news. Never spam.</p>
         <!--
           Newsletter signup. To wire to Brevo, replace `action` with the
-          hosted form URL from Brevo (Settings → Subscription Forms →
-          "Get HTML code" → copy the form action) and remove the mailto
+          hosted form URL from Brevo (Settings â†’ Subscription Forms â†’
+          "Get HTML code" â†’ copy the form action) and remove the mailto
           fallback. Until then this routes to contact@macona.org so
           subscribe requests aren't lost.
         -->
