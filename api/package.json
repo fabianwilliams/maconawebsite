@@ -1,0 +1,9 @@
+{
+  "name": "macona-web-api",
+  "version": "1.0.0",
+  "description": "Azure SWA Managed Functions for macona.org",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  }
+}
