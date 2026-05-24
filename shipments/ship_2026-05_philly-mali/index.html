@@ -6,6 +6,7 @@
   <title>Philly to Mali Shipment — Live Tracker — MACONA</title>
   <meta name="description" content="Live tracking of MACONA's Spring 2026 Philadelphia to Mali shipment. Follow the journey, see real port pings, ask questions, and fund the next bag.">
   <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/lightbox.css">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Philly to Mali Shipment — Live Tracker — MACONA">
@@ -367,9 +368,9 @@
       <div class="container">
         <span class="section-label">Journey Log</span>
         <h2>What has happened so far</h2>
-        <p>Every event is timestamped and photographed. As trackers ping new locations, new events will appear here.</p>
+        <p>Every event is timestamped and photographed. As trackers ping new locations, new events will appear here. <span class="lightbox-hint">Tip: click any photo to view it full size.</span></p>
 
-        <div class="journey-feed">
+        <div class="journey-feed lightbox-enabled">
 
           <article class="journey-event">
             <img src="/img/blog/2026-05-05_PhillyShipment_Inline1_BagsOutsideContainer.jpg" alt="5 shipping bags packed and ready at the container yard">
@@ -501,6 +502,7 @@
     </div>
   </footer>
 
+  <script src="/js/lightbox.js"></script>
   <script>
     // ===== Mobile menu toggle =====
     (function() {
