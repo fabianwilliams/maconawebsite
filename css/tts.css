@@ -1,0 +1,104 @@
+/* TTS widget: listen-to-article control bar
+   Auto-injected on pages with <article class="article-body">.
+   Uses the browser's built-in speechSynthesis (free, no API key). */
+
+.tts-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 0 0 2rem 0;
+  padding: 0.85rem 1rem;
+  background: #fafaf9;
+  border: 1px solid #e5e5e0;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #1a1a2e;
+}
+
+.tts-widget.tts-unsupported {
+  display: none;
+}
+
+.tts-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #2d6a4f;
+  margin-right: 0.25rem;
+}
+
+.tts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s, background-color 0.18s;
+  font-family: inherit;
+}
+.tts-btn:hover {
+  opacity: 0.92;
+}
+.tts-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.tts-btn.tts-stop {
+  background: #b08968;
+}
+.tts-btn .tts-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.tts-rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  color: #5a5a7a;
+  font-size: 0.85rem;
+}
+.tts-rate select {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #e5e5e0;
+  border-radius: 5px;
+  background: #fff;
+  color: #1a1a2e;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tts-status {
+  width: 100%;
+  font-size: 0.78rem;
+  color: #5a5a7a;
+  margin-top: 0.25rem;
+  min-height: 1em;
+}
+.tts-status.tts-status-active {
+  color: #2d6a4f;
+}
+
+@media (max-width: 560px) {
+  .tts-widget {
+    padding: 0.75rem 0.85rem;
+    gap: 0.45rem;
+  }
+  .tts-rate {
+    margin-left: 0;
+  }
+  .tts-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
