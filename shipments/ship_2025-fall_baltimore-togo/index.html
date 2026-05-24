@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philadelphia and Baltimore to Togo, Fall 2025 — MACONA</title>
+  <meta name="description" content="MACONA's Fall 2025 shipment. 4 GPS trackers. Packed Sept 15, handed off in Philly Sept 17, Port of Baltimore Oct 1, Le Havre France Oct 8-10, Lome Togo Nov 11. Trackers split for onward distribution across Togo, Mali, and France.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <meta property="og:title" content="Philadelphia and Baltimore to Togo, Fall 2025 — MACONA">
+  <meta property="og:description" content="4 trackers, Maryland to Togo via Philly, Baltimore, and Le Havre. 3,714 miles of ocean crossing captured live.">
+  <meta property="og:image" content="https://macona.org/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://macona.org/shipments/ship_2025-fall_baltimore-togo/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://macona.org/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg">
+
+  <style>
+    :root {
+      --bg: #fafaf9; --bg-card: #ffffff; --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e; --text-muted: #5a5a7a;
+      --accent: #2d6a4f; --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --success: #2d6a4f; --pending: #b08968; --upcoming: #c8c8b8;
+      --max-w: 1100px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
+
+    .nav { background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); text-decoration: none; }
+    .nav-donate { background: var(--accent); color: #fff !important; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 600; }
+    .nav-donate:hover { opacity: 0.9; text-decoration: none; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
+
+    .hero { padding: 4rem 0 2.5rem; text-align: center; background: linear-gradient(180deg, var(--accent-glow) 0%, var(--bg) 100%); }
+    .hero .section-label { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.75rem; }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; color: var(--text); letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .hero .meta { font-size: 1rem; color: var(--text-muted); }
+    .hero .meta strong { color: var(--text); }
+    .completed-banner { max-width: var(--max-w); margin: 1.5rem auto 0; padding: 1rem 1.5rem; background: var(--accent-glow); border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); font-weight: 600; text-align: center; }
+
+    .section { padding: 3rem 0; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .section-label { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.75rem; }
+    .section h2 { font-size: 1.75rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+    .section p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; max-width: 780px; }
+
+    .stages-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-top: 1.5rem; padding: 1.5rem 0; position: relative; }
+    .stages-bar::before { content: ''; position: absolute; top: 2.3rem; left: 10%; right: 10%; height: 2px; background: var(--border); z-index: 0; }
+    .stage { position: relative; z-index: 1; text-align: center; padding: 0 0.25rem; }
+    .stage-dot { width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 0.5rem; background: var(--bg-card); border: 2px solid var(--upcoming); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); }
+    .stage.complete .stage-dot { background: var(--success); border-color: var(--success); color: #fff; }
+    .stage-label { font-size: 0.85rem; font-weight: 600; color: var(--text); display: block; }
+    .stage-date { font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.2rem; }
+    .stage.complete .stage-label { color: var(--success); }
+
+    .journey-feed { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .journey-event { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 1.5rem; transition: box-shadow 0.2s; }
+    .journey-event:hover { box-shadow: 0 4px 20px var(--accent-glow); }
+    .journey-event img { border-radius: 8px; object-fit: cover; width: 100%; max-height: 300px; }
+    .journey-event-body h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+    .journey-event-meta { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .journey-event-meta time, .journey-event-meta .loc { color: var(--accent); }
+    .journey-event-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.5rem; }
+    .gallery-thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; margin-top: 0.75rem; }
+    .gallery-thumbs img { aspect-ratio: 4/3; max-height: 110px; object-fit: cover; border-radius: 6px; }
+
+    .subscribe-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-top: 1.5rem; }
+    .subscribe-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .subscribe-card .helper { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+    .field input, .field textarea { width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; font-family: inherit; background: var(--bg); color: var(--text); }
+    .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .field.honeypot { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+    .subscribe-btn { background: var(--accent); color: #fff; padding: 0.7rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; }
+    .subscribe-btn:hover { opacity: 0.9; }
+    .subscribe-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .form-status { margin-top: 0.85rem; font-size: 0.9rem; min-height: 1.2em; }
+    .form-status.success { color: var(--success); }
+    .form-status.error { color: #c54b40; }
+
+    .donate-cta { text-align: center; padding: 3rem 0; background: linear-gradient(180deg, var(--bg) 0%, var(--accent-glow) 100%); }
+    .donate-cta h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .donate-cta p { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #fff !important; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 600; font-size: 1rem; }
+    .btn:hover { opacity: 0.9; text-decoration: none; }
+
+    .footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 3rem 0 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+    .footer-brand p { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6; }
+    .footer-logo { font-size: 1.25rem; font-weight: 700; color: var(--accent); }
+    .footer h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text); margin-bottom: 0.75rem; }
+    .footer ul { list-style: none; }
+    .footer ul li { margin-bottom: 0.4rem; }
+    .footer ul a { font-size: 0.9rem; color: var(--text-muted); }
+    .footer ul a:hover { color: var(--accent); }
+    .footer-bottom { max-width: var(--max-w); margin: 0 auto; padding: 1.5rem 1.5rem 0; border-top: 1px solid var(--border); margin-top: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); flex-direction: column; padding: 1rem 1.5rem; gap: 0.75rem; }
+      .nav-links.open { display: flex; }
+      .hero h1 { font-size: 1.85rem; }
+      .stages-bar { grid-template-columns: 1fr; gap: 1rem; }
+      .stages-bar::before { display: none; }
+      .stage { display: grid; grid-template-columns: 50px 1fr; align-items: center; gap: 1rem; text-align: left; }
+      .stage-dot { margin: 0; }
+      .journey-event { grid-template-columns: 1fr; gap: 1rem; }
+      .footer-inner { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/donate/" class="nav-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="section-label">Completed Shipment</span>
+      <h1>Philadelphia and Baltimore to Togo, Fall 2025</h1>
+      <p class="meta"><strong>4 GPS trackers</strong> &middot; packed Sep 15, 2025 &middot; Port of Baltimore Oct 1 &middot; Le Havre France Oct 8-10 &middot; Lome Togo Nov 11</p>
+    </div>
+    <div class="completed-banner">Delivered. Container reached Lome, Togo on November 11, 2025. Trackers then split for onward distribution across Togo, Mali, and France.</div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label">Journey Stages</span>
+        <h2>The full journey, end to end</h2>
+        <p>Bags packed in Maryland on September 15 with all four trackers attached. Handed off at the Philly warehouse on September 17, transferred to the Port of Baltimore on October 1. The container pinged from Le Havre, France on October 8 and again on October 10. Mid-Atlantic distance ping on October 20. By November 11, the container had reached Lome, Togo. Trackers then split. Some stayed in Togo for distribution, others continued to Mali, one surfaced back in France.</p>
+        <div class="stages-bar">
+          <div class="stage complete"><div class="stage-dot">1</div><span class="stage-label">Collecting</span><span class="stage-date">Sep 15, 2025</span></div>
+          <div class="stage complete"><div class="stage-dot">2</div><span class="stage-label">US port</span><span class="stage-date">Sep 17 &ndash; Oct 1</span></div>
+          <div class="stage complete"><div class="stage-dot">3</div><span class="stage-label">At sea</span><span class="stage-date">Oct 1-20, 2025</span></div>
+          <div class="stage complete"><div class="stage-dot">4</div><span class="stage-label">Africa port</span><span class="stage-date">Nov 11, 2025</span></div>
+          <div class="stage complete"><div class="stage-dot">5</div><span class="stage-label">Distribution</span><span class="stage-date">Nov 2025</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label">Journey Log</span>
+        <h2>What happened, in order</h2>
+        <p>From the pre-departure inventory shot in Maryland to the Lome port arrival in Togo. Every event timestamped, photographed, and pinned to the map.</p>
+
+        <div class="journey-feed">
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg" alt="All bags packed with trackers visibly displayed, ready for transport to Philly">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Sep 15, 2025</time>
+                <span class="loc">Maryland, USA</span>
+                <span>Stage 1 &middot; Collecting</span>
+              </div>
+              <h3>Bags packed, trackers attached</h3>
+              <p>All bags packed with trackers visibly displayed. Pre-departure inventory shot before the trip to Philadelphia.</p>
+              <div class="gallery-thumbs">
+                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly2.jpeg" alt="Second view of the packed bags">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_September_17_AtPhillyWareHouseTrakersAll4.jpg" alt="All 4 trackers active inside the Philly warehouse">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Sep 17, 2025</time>
+                <span class="loc">Philadelphia, PA warehouse</span>
+                <span>Stage 2 &middot; US port</span>
+              </div>
+              <h3>Arrival at the Philadelphia warehouse</h3>
+              <p>All 4 trackers active inside the Philly warehouse before container loading.</p>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_TrackersOnMovePhillyToBaltimore.jpg" alt="Trackers showing the container moving from Philly to Baltimore">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Oct 1, 2025</time>
+                <span class="loc">Philly to Baltimore corridor</span>
+                <span>Stage 2 &middot; US port</span>
+              </div>
+              <h3>Container moves Philly to Baltimore</h3>
+              <p>All 4 trackers pinging strong while the container was moved from the Philly warehouse to the Port of Baltimore.</p>
+              <div class="gallery-thumbs">
+                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_All4Trackers.jpg" alt="All 4 trackers pinging strong">
+                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_PortOfBaltimore_Trakers2.jpg" alt="Two trackers reported from Port of Baltimore">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October8_2Trackers_LeHarve_France.jpg" alt="2 trackers pinging from Le Havre, France">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Oct 8, 2025</time>
+                <span class="loc">Le Havre, France</span>
+                <span>Stage 3 &middot; Port ping</span>
+              </div>
+              <h3>First European port stop: Le Havre, France</h3>
+              <p>2 of 4 trackers pinged from Le Havre on Oct 8. By Oct 10, 3 of 4 were showing in the same port.</p>
+              <div class="gallery-thumbs">
+                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October10_3Trackers_LeHavre_France.jpg" alt="3 trackers pinging from Le Havre, France (Oct 10)">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October20_4Trackers_3714MilesAway.jpg" alt="All 4 trackers reported 3,714 miles from origin, mid-Atlantic">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Oct 20, 2025</time>
+                <span class="loc">Atlantic crossing</span>
+                <span>Stage 3 &middot; At sea</span>
+              </div>
+              <h3>3,714 miles from origin</h3>
+              <p>Mid-Atlantic distance milestone. All 4 trackers reading 3,714 miles from the US start point.</p>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November11_2Trackers_Lome_Togo_Port.jpg" alt="2 trackers active at Lome port, Togo">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Nov 11, 2025</time>
+                <span class="loc">Lome, Togo</span>
+                <span>Stage 4 &middot; Africa port</span>
+              </div>
+              <h3>African landfall: Lome, Togo</h3>
+              <p>First African landfall. 2 trackers showed at Lome port that morning; by the end of the day, 3 of 4 were pinging from the same port.</p>
+              <div class="gallery-thumbs">
+                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November11_3Trackers_Lome_Togo_Port.jpg" alt="3 trackers active at Lome port, Togo">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November_11_1TrakerInFrance_1InMali_1StillInTogo.jpg" alt="Trackers split between France, Mali, and Togo for onward distribution">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Nov 11, 2025</time>
+                <span class="loc">France &middot; Mali &middot; Togo</span>
+                <span>Stage 5 &middot; Distribution</span>
+              </div>
+              <h3>Trackers split for onward distribution</h3>
+              <p>Same day, trackers split paths. 1 reading from France (likely a returning traveler), 1 in Mali, 1 still in Togo. Container contents distributed across multiple endpoints.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label">Stay With Future Shipments</span>
+        <h2>Get notified when the next one ships</h2>
+        <p>This one is delivered. The next container is already filling. Subscribe to know when it leaves, where the trackers ping, and when distribution lands.</p>
+
+        <div class="subscribe-card">
+          <h3>Subscribe to MACONA shipments</h3>
+          <p class="helper">Double opt-in via email. We will only use your address for shipment updates and direct replies.</p>
+          <form id="subscribe-form" novalidate>
+            <div class="field">
+              <label for="firstName">Your first name</label>
+              <input type="text" id="firstName" name="firstName" required maxlength="80" autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required maxlength="254" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="question">Anything you would like to ask or see? (optional)</label>
+              <textarea id="question" name="question" maxlength="2000" placeholder="Tell us what you are curious about."></textarea>
+            </div>
+            <div class="field honeypot" aria-hidden="true">
+              <label for="website">Leave this empty</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="shipmentSlug" value="ship_2025-fall_baltimore-togo">
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="donate-cta">
+      <div class="container">
+        <h2>Fund the next shipment</h2>
+        <p>For the price of a single cup of coffee or tea, you help put food on the table for a child in Africa. $5, $25, or $100 goes directly into the clothes, food, school supplies, and hygiene kits MACONA delivers.</p>
+        <a href="https://go.macona.org/donate" class="btn">Donate</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">MACONA</div>
+        <p>Mimi African Charities of North America. A 501(c)(3) nonprofit providing relief and support for children and women in Africa and the Greater Baltimore Area.</p>
+        <p style="margin-top: 0.5rem;">7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723</p>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/programs/">Programs</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/shipments/">Shipments</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="/donate/">Donate</a></li>
+          <li><a href="/contact/">Volunteer</a></li>
+          <li><a href="/contact/">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li>EIN: 93-3813688</li>
+          <li><a href="/docs/MACONA-501c3-IRS-Determination-Letter.pdf" target="_blank" rel="noopener">IRS 501(c)(3) Letter (PDF)</a></li>
+          <li><a href="mailto:contact@macona.org">contact@macona.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MACONA. All rights reserved. MACONA is a 501(c)(3) tax-exempt organization. EIN: 93-3813688.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function() {
+          var open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open);
+        });
+      }
+    })();
+
+    (function() {
+      var form = document.getElementById('subscribe-form');
+      if (!form) return;
+      var statusEl = form.querySelector('.form-status');
+      var btn = form.querySelector('.subscribe-btn');
+      var WORKER_URL = 'https://macona-subscribe.fabian-384.workers.dev/';
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        statusEl.className = 'form-status';
+        statusEl.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        var payload = {
+          firstName: form.firstName.value.trim(),
+          email: form.email.value.trim(),
+          question: form.question.value.trim(),
+          shipmentSlug: form.shipmentSlug.value,
+          website: form.website.value
+        };
+
+        fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function(r) {
+          return r.json().then(function(data) {
+            if (r.ok && data.ok) {
+              statusEl.className = 'form-status success';
+              if (data.status === 'already_subscribed_or_pending') {
+                statusEl.textContent = 'You are already on our list. We will send shipment updates as the next one moves.';
+              } else {
+                statusEl.textContent = 'Check your email to confirm. We will send you updates as the next shipment moves.';
+              }
+              form.reset();
+            } else {
+              statusEl.className = 'form-status error';
+              statusEl.textContent = data.error || 'Something went wrong. Please try again.';
+            }
+          });
+        }).catch(function() {
+          statusEl.className = 'form-status error';
+          statusEl.textContent = 'Network error. Please try again.';
+        }).finally(function() {
+          btn.disabled = false;
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
