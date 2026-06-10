@@ -10,13 +10,13 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Philly to Mali Shipment — Live Tracker — MACONA">
-  <meta property="og:description" content="See where the donations are right now. Real GPS tracker pings, photos, and the route from Maryland to Mali.">
-  <meta property="og:image" content="https://macona.org/img/blog/2026-05-05_PhillyShipment_Hero_WorkerLoading.jpg">
+  <meta property="og:description" content="See where the donations are right now. Trackers pinged again from Brooklyn's Red Hook Container Terminal on June 5.">
+  <meta property="og:image" content="https://macona.org/img/shipments/ship_2026-05_philly-mali/2026-06-05_macona-tt2_red-hook-container-terminal.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://macona.org/shipments/ship_2026-05_philly-mali/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://macona.org/img/blog/2026-05-05_PhillyShipment_Hero_WorkerLoading.jpg">
+  <meta name="twitter:image" content="https://macona.org/img/shipments/ship_2026-05_philly-mali/2026-06-05_macona-tt2_red-hook-container-terminal.jpg">
 
   <style>
     /* ===== Design Tokens ===== */
@@ -175,13 +175,35 @@
       gap: 1.5rem;
       transition: box-shadow 0.2s;
     }
-    .journey-event:hover { box-shadow: 0 4px 20px var(--accent-glow); }
-    .journey-event img {
-      border-radius: 8px;
-      object-fit: cover;
-      width: 100%;
-      max-height: 300px;
-    }
+	    .journey-event:hover { box-shadow: 0 4px 20px var(--accent-glow); }
+	    .journey-event img {
+	      border-radius: 8px;
+	      object-fit: cover;
+	      width: 100%;
+	      max-height: 300px;
+	    }
+	    .journey-gallery {
+	      display: grid;
+	      grid-template-columns: repeat(3, 1fr);
+	      gap: 0.5rem;
+	      align-self: start;
+	    }
+	    .journey-gallery img {
+	      aspect-ratio: 4 / 5;
+	      height: 100%;
+	      max-height: 320px;
+	      object-position: center top;
+	    }
+	    .journey-gallery.featured { grid-template-columns: repeat(2, 1fr); }
+	    .journey-gallery.featured img:first-child {
+	      grid-column: 1 / -1;
+	      aspect-ratio: 16 / 10;
+	      max-height: 260px;
+	    }
+	    .journey-gallery.featured img:not(:first-child) {
+	      aspect-ratio: 1 / 1;
+	      max-height: 150px;
+	    }
     .journey-event-body h3 {
       font-size: 1.15rem;
       font-weight: 700;
@@ -286,7 +308,12 @@
       .stages-bar::before { display: none; }
       .stage { display: grid; grid-template-columns: 50px 1fr; align-items: center; gap: 1rem; text-align: left; }
       .stage-dot { margin: 0; }
-      .journey-event { grid-template-columns: 1fr; gap: 1rem; }
+	      .journey-event { grid-template-columns: 1fr; gap: 1rem; }
+	      .journey-gallery,
+	      .journey-gallery.featured { grid-template-columns: 1fr; }
+	      .journey-gallery img,
+	      .journey-gallery.featured img:first-child,
+	      .journey-gallery.featured img:not(:first-child) { aspect-ratio: 16 / 11; max-height: 360px; }
       .footer-inner { grid-template-columns: 1fr; text-align: center; }
     }
   </style>
@@ -316,7 +343,7 @@
     <div class="container">
       <span class="section-label">Live Shipment Tracker</span>
       <h1>Philadelphia to Mali, Spring 2026</h1>
-      <p class="meta"><strong>5 bags</strong> of clothing, hygiene products, and OTC medicine &middot; <strong>4 active GPS trackers</strong> &middot; <strong>Currently:</strong> awaiting at-sea departure</p>
+	      <p class="meta"><strong>5 bags</strong> of clothing, hygiene products, and OTC medicine &middot; <strong>4 active GPS trackers</strong> &middot; <strong>Currently:</strong> Brooklyn port staging</p>
     </div>
   </header>
 
@@ -347,7 +374,7 @@
           <div class="stage active">
             <div class="stage-dot">3</div>
             <span class="stage-label">At sea</span>
-            <span class="stage-date">at NJ port, Jun 3</span>
+	            <span class="stage-date">Brooklyn port, Jun 5</span>
           </div>
           <div class="stage upcoming">
             <div class="stage-dot">4</div>
@@ -411,18 +438,35 @@
             </div>
           </article>
 
-          <article class="journey-event">
-            <img src="/img/blog/2026-06-03_PhillyMali_AirTag_Newark.jpg" alt="Find My map showing a MACONA AirTag pinging near the Port Newark-Elizabeth complex in New Jersey">
-            <div class="journey-event-body">
+	          <article class="journey-event">
+	            <img src="/img/blog/2026-06-03_PhillyMali_AirTag_Newark.jpg" alt="Find My map showing a MACONA AirTag pinging near the Port Newark-Elizabeth complex in New Jersey">
+	            <div class="journey-event-body">
               <div class="journey-event-meta">
                 <time>June 3, 2026</time>
                 <span class="loc">Port Newark-Elizabeth, NJ</span>
                 <span>Stage 3 &middot; At sea (staging)</span>
               </div>
               <h3>Trackers light up in New Jersey, staging at the port</h3>
-              <p>After weeks quiet, the AirTags pinged again this morning as the container moved north through New Jersey: TT3 on the NJ Turnpike at Linden at 10:20, then TT4 in Elizabeth and TT-1 in Newark, all inside the Port Newark-Elizabeth complex. The container is staging at one of the busiest export ports on the East Coast for its ocean crossing to Mali.</p>
-            </div>
-          </article>
+	              <p>After weeks quiet, the AirTags pinged again this morning as the container moved north through New Jersey: TT3 on the NJ Turnpike at Linden at 10:20, then TT4 in Elizabeth and TT-1 in Newark, all inside the Port Newark-Elizabeth complex. The container is staging at one of the busiest export ports on the East Coast for its ocean crossing to Mali.</p>
+	            </div>
+	          </article>
+
+	          <article class="journey-event">
+	            <div class="journey-gallery featured">
+	              <img src="/img/shipments/ship_2026-05_philly-mali/2026-06-05_macona-tt1_brooklyn-red-hook-wide.jpg" alt="Find My map showing MACONA-TT-1 pinging in Brooklyn, New York near Red Hook">
+	              <img src="/img/shipments/ship_2026-05_philly-mali/2026-06-05_macona-tt2_red-hook-container-terminal.jpg" alt="Find My map showing MACONA-TT2 pinging at Red Hook Container Terminal in Brooklyn">
+	              <img src="/img/shipments/ship_2026-05_philly-mali/2026-06-05_macona-tt1_new-york-harbor-wide.jpg" alt="Wide Find My map showing MACONA-TT-1 near New York Harbor and Brooklyn">
+	            </div>
+	            <div class="journey-event-body">
+	              <div class="journey-event-meta">
+	                <time>June 5, 2026</time>
+	                <span class="loc">Brooklyn, NY</span>
+	                <span>Stage 3 &middot; US port staging</span>
+	              </div>
+	              <h3>Trackers ping from Brooklyn's Red Hook Container Terminal</h3>
+	              <p>Two trackers surfaced again at 09:57 in Brooklyn, New York 11231, clustered around Red Hook Container Terminal and New York Harbor. The June 6 screenshots show MACONA-TT-1 and MACONA-TT2 still active, confirming the bags stayed trackable after the move from New Jersey into the Brooklyn port area.</p>
+	            </div>
+	          </article>
 
         </div>
       </div>
