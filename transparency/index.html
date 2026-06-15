@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparency &amp; Governance | MACONA</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="MACONA governance and transparency: IRS 501(c)(3) determination letter, tax filings, and board-adopted policies.">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .nav { background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .nav-links .nav-donate { background: var(--accent); color: #fff !important; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 600; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); flex-direction: column; padding: 1rem 1.5rem; gap: 0.75rem; }
+      .nav-links.open { display: flex; }
+    }
+    .hero { text-align: center; padding: 4rem 1.5rem 2.5rem; background: linear-gradient(180deg, var(--accent-glow) 0%, var(--bg) 100%); }
+    .hero h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1rem; color: var(--text-muted); }
+    .content { max-width: 780px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .content h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--text); }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 { font-size: 1.05rem; font-weight: 700; margin: 1.25rem 0 0.5rem; color: var(--text); }
+    .content p { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+    .content ul { margin: 0 0 1rem 1.5rem; color: var(--text-muted); }
+    .content ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .content table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.95rem; }
+    .content th, .content td { text-align: left; padding: 0.55rem 0.75rem; border: 1px solid var(--border); color: var(--text-muted); }
+    .content th { background: var(--accent-glow); color: var(--text); font-weight: 600; }
+    .doc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    .doc-card strong { color: var(--text); }
+    details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 0 1.25rem; margin-bottom: 0.85rem; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--text); padding: 0.9rem 0; list-style-position: inside; }
+    details[open] summary { border-bottom: 1px solid var(--border); margin-bottom: 0.75rem; }
+    details .policy-body { padding-bottom: 1rem; }
+    .badge { display: inline-block; background: var(--accent-glow); color: var(--accent); font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.55rem; border-radius: 999px; margin-left: 0.4rem; vertical-align: middle; }
+    .footer { background: var(--text); color: #ccc; text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+    .footer a { color: #d4a373; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; list-style: none; }
+    .footer-links a { color: #ddd; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="/img/logo/macona-logo.png" alt="MACONA"></a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/donate/" class="nav-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Transparency &amp; Governance</h1>
+    <p>Our legal status, public filings, and board-adopted policies, in one place.</p>
+  </header>
+
+  <main class="content">
+
+    <h2>Our Legal Status</h2>
+    <p>Mimi African Charities of North America (MACONA) is a tax-exempt public charity organized under the laws of the State of Maryland.</p>
+    <ul>
+      <li><strong>Legal name:</strong> Mimi African Charities of North America (operating as MACONA)</li>
+      <li><strong>EIN:</strong> 93-3813688</li>
+      <li><strong>IRS status:</strong> 501(c)(3) public charity, classified under 509(a)(2)</li>
+      <li><strong>Tax-exempt effective:</strong> October 18, 2023</li>
+      <li><strong>Contributions:</strong> Tax-deductible to the extent allowed by law</li>
+      <li><strong>Headquarters:</strong> 7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723</li>
+    </ul>
+
+    <h2>Public Documents</h2>
+    <div class="doc-card">
+      <p><strong>IRS 501(c)(3) Determination Letter</strong><br>
+      Our official IRS recognition of tax-exempt status.<br>
+      <a href="/docs/MACONA-501c3-IRS-Determination-Letter.pdf" target="_blank" rel="noopener">View 501(c)(3) Determination Letter (PDF)</a></p>
+    </div>
+    <div class="doc-card">
+      <p><strong>Annual IRS Filings</strong><br>
+      MACONA filed a Form 990-EZ for fiscal year 2023 and Form 990-N (e-Postcard) for 2024 and 2025. Copies are available on request and through the IRS Tax Exempt Organization Search.<br>
+      <a href="https://apps.irs.gov/app/eos/" target="_blank" rel="noopener">IRS Tax Exempt Organization Search</a></p>
+    </div>
+
+    <h2>Governance Policies</h2>
+    <p>MACONA's Board of Directors has adopted the following policies. Full text for the conflict-of-interest and whistleblower policies is below; the remaining policies are available on request at <a href="mailto:contact@macona.org">contact@macona.org</a>.</p>
+    <ul>
+      <li><strong>Non-Discrimination Policy</strong> <span class="badge">Adopted</span></li>
+      <li><strong>Child Safeguarding Policy</strong> <span class="badge">Adopted</span></li>
+      <li><strong>Gift-in-Kind Acceptance Policy</strong> <span class="badge">Adopted</span></li>
+      <li><strong>Conflict of Interest Policy</strong> <span class="badge">Adopted</span> (full text below)</li>
+      <li><strong>Whistleblower and Document Retention Policy</strong> <span class="badge">Adopted</span> (full text below)</li>
+    </ul>
+
+    <details>
+      <summary>Conflict of Interest Policy</summary>
+      <div class="policy-body">
+        <p><em>Effective June 15, 2026. Adopted by the Board of Directors.</em></p>
+        <h3>Article I. Purpose</h3>
+        <p>The purpose of this Conflict of Interest Policy is to protect the interests of MACONA when it is contemplating entering into a transaction or arrangement that might benefit the private interest of an officer or director, or might result in a possible excess benefit transaction. This policy supplements, and does not replace, any applicable state and federal laws governing conflicts of interest for nonprofit and charitable organizations.</p>
+        <h3>Article II. Definitions</h3>
+        <p><strong>Interested Person.</strong> Any director, officer, or member of a committee with governing board delegated powers who has a direct or indirect financial interest is an interested person.</p>
+        <p><strong>Financial Interest.</strong> A person has a financial interest if the person has, directly or indirectly, through business, investment, or family: an ownership or investment interest in any entity with which MACONA has a transaction or arrangement; a compensation arrangement with MACONA or with any entity or individual with which MACONA has a transaction or arrangement; or a potential ownership, investment, or compensation arrangement with any entity or individual with which MACONA is negotiating. A financial interest is not necessarily a conflict of interest; a conflict exists only if the governing board or committee decides that it does.</p>
+        <h3>Article III. Procedures</h3>
+        <p><strong>Duty to Disclose.</strong> An interested person must disclose the existence of the financial interest and all material facts to the directors and committee members considering the proposed transaction.</p>
+        <p><strong>Determining Whether a Conflict Exists.</strong> After disclosure and discussion, the interested person shall leave the meeting while the determination of a conflict is discussed and voted upon. The remaining members decide whether a conflict exists.</p>
+        <p><strong>Addressing the Conflict.</strong> The interested person may make a presentation but shall then leave during the discussion and vote. The board may appoint a disinterested person or committee to investigate alternatives. The board shall determine whether a more advantageous transaction is reasonably attainable without a conflict, and if not, whether the transaction is in MACONA's best interest, fair, and reasonable, deciding by majority vote of the disinterested members.</p>
+        <p><strong>Violations.</strong> If the board has reasonable cause to believe a member failed to disclose an actual or possible conflict, it shall inform the member and allow an explanation. If a failure to disclose is found, the board shall take appropriate disciplinary and corrective action.</p>
+        <h3>Article IV. Records of Proceedings</h3>
+        <p>The minutes shall record the names of persons with a financial interest, the nature of that interest, any action taken to determine whether a conflict existed, and the board's decision.</p>
+        <h3>Article V. Annual Statements</h3>
+        <p>Each director, officer, and member of a committee with board delegated powers shall annually sign a statement affirming receipt and understanding of this policy and agreement to comply with it.</p>
+        <h3>Article VI. Periodic Reviews</h3>
+        <p>Periodic reviews shall confirm that compensation is reasonable and the result of arm's length bargaining, and that arrangements with other organizations conform to MACONA's written policies, are properly recorded, and further its charitable purposes.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Whistleblower and Document Retention Policy</summary>
+      <div class="policy-body">
+        <p><em>Effective June 15, 2026. Adopted by the Board of Directors.</em></p>
+        <h3>Part A. Whistleblower Protection</h3>
+        <p><strong>Purpose.</strong> MACONA requires its directors, officers, volunteers, and any employees to observe high standards of business and personal ethics, to comply with applicable laws and regulations, and to support an environment where concerns can be raised without fear of retaliation.</p>
+        <p><strong>Reporting Responsibility.</strong> All directors, officers, volunteers, and employees are responsible for reporting concerns about violations of MACONA's code of conduct or suspected violations of law that govern MACONA's operations.</p>
+        <p><strong>No Retaliation.</strong> No one who reports a concern in good faith shall suffer harassment, retaliation, or adverse consequence. Anyone who retaliates against a good-faith reporter is subject to discipline up to and including removal. This protection applies even if the concern is later found to be mistaken.</p>
+        <p><strong>Reporting Procedure.</strong> Concerns should be reported to the President or Board Chair, or, if the concern involves them, to any other member of the Board of Directors. Concerns may be submitted in writing to <a href="mailto:contact@macona.org">contact@macona.org</a> or by mail. MACONA will use best efforts to protect the confidentiality of the reporting person consistent with conducting an adequate review.</p>
+        <p><strong>Handling and Good Faith.</strong> Reports will be acknowledged promptly, investigated or referred for investigation, and reported with any corrective action to the Board. A reporter must act in good faith and have reasonable grounds; knowingly false or malicious allegations are themselves a violation of this policy.</p>
+        <h3>Part B. Document Retention and Destruction</h3>
+        <p><strong>Purpose.</strong> This policy provides for the systematic retention and destruction of MACONA's physical and electronic records, ensuring records are protected and that records of no further value are discarded at the proper time.</p>
+        <p><strong>Litigation Hold.</strong> MACONA will not destroy, alter, or conceal any record with intent to obstruct or influence any actual or anticipated investigation or legal proceeding. On notice of any such matter, destruction of relevant documents stops until it is resolved.</p>
+        <p><strong>Retention Schedule.</strong></p>
+        <table>
+          <tr><th>Record type</th><th>Minimum retention</th></tr>
+          <tr><td>Articles of incorporation, bylaws, IRS determination letter</td><td>Permanent</td></tr>
+          <tr><td>Board and committee minutes</td><td>Permanent</td></tr>
+          <tr><td>Form 990 / 990-EZ / 990-N and supporting records</td><td>7 years</td></tr>
+          <tr><td>Financial statements and general ledgers</td><td>7 years</td></tr>
+          <tr><td>Bank statements and reconciliations</td><td>7 years</td></tr>
+          <tr><td>Donation and grant records and acknowledgments</td><td>7 years</td></tr>
+          <tr><td>Contracts and memoranda of understanding</td><td>7 years after expiration</td></tr>
+          <tr><td>Insurance policies</td><td>Permanent (current); 7 years (expired)</td></tr>
+          <tr><td>General correspondence</td><td>3 years</td></tr>
+          <tr><td>Volunteer records</td><td>3 years after end of service</td></tr>
+        </table>
+        <p><strong>Electronic Records and Administration.</strong> Electronic documents follow the same schedule as their paper counterparts, with backups where practical and access to sensitive records limited to authorized persons. The President, or a designee, administers this policy and reviews the schedule periodically.</p>
+      </div>
+    </details>
+
+    <h2>Related Policies</h2>
+    <p>See also our <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Use</a>.</p>
+
+    <h2>Contact</h2>
+    <p>
+      MACONA, Mimi African Charities of North America<br>
+      7500 Montpelier Rd. Ste 105-334, Laurel, MD 20723<br>
+      Email: <a href="mailto:contact@macona.org">contact@macona.org</a>
+    </p>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/programs/">Programs</a></li>
+      <li><a href="/donate/">Donate</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/transparency/">Transparency</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/terms/">Terms</a></li>
+    </ul>
+    <p>&copy; 2026 Mimi African Charities of North America (MACONA). EIN: 93-3813688.</p>
+  </footer>
+
+</body>
+</html>
