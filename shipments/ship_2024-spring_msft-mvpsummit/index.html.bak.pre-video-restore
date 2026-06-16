@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Philadelphia and Baltimore to Togo, Fall 2025 - MACONA</title>
-  <meta name="description" content="MACONA's Fall 2025 shipment. 4 GPS trackers. Packed Sept 15, handed off in Philly Sept 17, Port of Baltimore Oct 1, Le Havre France Oct 8-10, Lome Togo Nov 11. Trackers split for onward distribution across Togo, Mali, and France.">
+  <title>MVP Summit + TechCon Seattle to West Africa, Spring 2024 â€” MACONA</title>
+  <meta name="description" content="MACONA's first GPS-tracked shipment. Donations collected at the Microsoft MVP Summit and TechCon Seattle, arrived West Africa May 2024, distributed at the orphanage in June.">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="/css/lightbox.css">
 
-  <meta property="og:title" content="Philadelphia and Baltimore to Togo, Fall 2025 - MACONA">
-  <meta property="og:description" content="4 trackers, Maryland to Togo via Philly, Baltimore, and Le Havre. 3,714 miles of ocean crossing captured live.">
-  <meta property="og:image" content="https://macona.orghttps://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg">
+  <meta property="og:title" content="MVP Summit + TechCon Seattle to West Africa, Spring 2024 â€” MACONA">
+  <meta property="og:description" content="First MACONA shipment with a GPS tracker. From MSFT campus and TechCon Seattle to an orphanage in West Africa.">
+  <meta property="og:image" content="https://macona.org/img/shipments/ship_2024-spring_msft-mvpsummit/2024_May_Trakr-1-ArriveAfricaMap.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://macona.org/shipments/ship_2025-fall_baltimore-togo/">
+  <meta property="og:url" content="https://macona.org/shipments/ship_2024-spring_msft-mvpsummit/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://macona.orghttps://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg">
+  <meta name="twitter:image" content="https://macona.org/img/shipments/ship_2024-spring_msft-mvpsummit/2024_May_Trakr-1-ArriveAfricaMap.jpg">
 
   <style>
     :root {
@@ -63,6 +63,7 @@
     .stage { position: relative; z-index: 1; text-align: center; padding: 0 0.25rem; }
     .stage-dot { width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 0.5rem; background: var(--bg-card); border: 2px solid var(--upcoming); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); }
     .stage.complete .stage-dot { background: var(--success); border-color: var(--success); color: #fff; }
+    .stage.active .stage-dot { background: var(--pending); border-color: var(--pending); color: #fff; box-shadow: 0 0 0 6px rgba(176,137,104,0.15); }
     .stage-label { font-size: 0.85rem; font-weight: 600; color: var(--text); display: block; }
     .stage-date { font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.2rem; }
     .stage.complete .stage-label { color: var(--success); }
@@ -74,16 +75,15 @@
     .journey-event-body h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
     .journey-event-meta { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
     .journey-event-meta time, .journey-event-meta .loc { color: var(--accent); }
-    .journey-event-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.5rem; }
-    .gallery-thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; margin-top: 0.75rem; }
-    .gallery-thumbs img { aspect-ratio: 4/3; max-height: 110px; object-fit: cover; border-radius: 6px; }
+    .journey-event-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0; }
+    .journey-event video { width: 100%; max-height: 300px; border-radius: 8px; background: #000; }
 
     .subscribe-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-top: 1.5rem; }
     .subscribe-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
     .subscribe-card .helper { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.25rem; }
     .field { margin-bottom: 1rem; }
     .field label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
-    .field input, .field textarea { width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; font-family: inherit; background: var(--bg); color: var(--text); }
+    .field input, .field textarea { width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; font-family: inherit; background: var(--bg); color: var(--text); transition: border-color 0.2s; }
     .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
     .field textarea { min-height: 96px; resize: vertical; }
     .field.honeypot { position: absolute; left: -9999px; height: 0; overflow: hidden; }
@@ -145,10 +145,10 @@
   <header class="hero">
     <div class="container">
       <span class="section-label">Completed Shipment</span>
-      <h1>Philadelphia and Baltimore to Togo, Fall 2025</h1>
-      <p class="meta"><strong>4 GPS trackers</strong> &middot; packed Sep 15, 2025 &middot; Port of Baltimore Oct 1 &middot; Le Havre France Oct 8-10 &middot; Lome Togo Nov 11</p>
+      <h1>MVP Summit + TechCon Seattle to West Africa, Spring 2024</h1>
+      <p class="meta"><strong>First MACONA shipment with a GPS tracker</strong> &middot; collected at MSFT campus + TechCon Seattle &middot; arrived May 2024 &middot; distributed June 2024</p>
     </div>
-    <div class="completed-banner">Delivered. Container reached Lome, Togo on November 11, 2025. Trackers then split for onward distribution across Togo, Mali, and France.</div>
+    <div class="completed-banner">Delivered. Trackers pinged from West Africa May 24, 2024. Distribution at the orphanage rolled out June 6-10, 2024.</div>
   </header>
 
   <main>
@@ -157,13 +157,13 @@
       <div class="container">
         <span class="section-label">Journey Stages</span>
         <h2>The full journey, end to end</h2>
-        <p>Bags packed in Maryland on September 15 with all four trackers attached. Handed off at the Philly warehouse on September 17, transferred to the Port of Baltimore on October 1. The container pinged from Le Havre, France on October 8 and again on October 10. Mid-Atlantic distance ping on October 20. By November 11, the container had reached Lome, Togo. Trackers then split. Some stayed in Togo for distribution, others continued to Mali, one surfaced back in France.</p>
+        <p>This was MACONA's first shipment with an active GPS tracker on board. The donation collection ran through two software conferences in 2024: the Microsoft MVP Summit in March and TechCon Seattle in June. The container reached the African coast in late May, and the distribution team handed out clothing and food at the orphanage in early June.</p>
         <div class="stages-bar">
-          <div class="stage complete"><div class="stage-dot">1</div><span class="stage-label">Collecting</span><span class="stage-date">Sep 15, 2025</span></div>
-          <div class="stage complete"><div class="stage-dot">2</div><span class="stage-label">US port</span><span class="stage-date">Sep 17 &ndash; Oct 1</span></div>
-          <div class="stage complete"><div class="stage-dot">3</div><span class="stage-label">At sea</span><span class="stage-date">Oct 1-20, 2025</span></div>
-          <div class="stage complete"><div class="stage-dot">4</div><span class="stage-label">Africa port</span><span class="stage-date">Nov 11, 2025</span></div>
-          <div class="stage complete"><div class="stage-dot">5</div><span class="stage-label">Distribution</span><span class="stage-date">Nov 2025</span></div>
+          <div class="stage complete"><div class="stage-dot">1</div><span class="stage-label">Collecting</span><span class="stage-date">Mar &ndash; Jun 2024</span></div>
+          <div class="stage complete"><div class="stage-dot">2</div><span class="stage-label">US port</span><span class="stage-date">spring 2024</span></div>
+          <div class="stage complete"><div class="stage-dot">3</div><span class="stage-label">At sea</span><span class="stage-date">spring 2024</span></div>
+          <div class="stage complete"><div class="stage-dot">4</div><span class="stage-label">Africa port</span><span class="stage-date">May 24, 2024</span></div>
+          <div class="stage complete"><div class="stage-dot">5</div><span class="stage-label">Distribution</span><span class="stage-date">Jun 6-10, 2024</span></div>
         </div>
       </div>
     </section>
@@ -172,111 +172,98 @@
       <div class="container">
         <span class="section-label">Journey Log</span>
         <h2>What happened, in order</h2>
-        <p>From the pre-departure inventory shot in Maryland to the Lome port arrival in Togo. Every event timestamped, photographed, and pinned to the map. <span class="lightbox-hint">Tip: click any photo to view it full size.</span></p>
+        <p>Photos from the conference floor, the tracker's first African coastline ping, and the volunteers on the ground handing out clothes and food to the children at the orphanage. <span class="lightbox-hint">Tip: click any photo to view it full size.</span></p>
 
         <div class="journey-feed lightbox-enabled">
 
           <article class="journey-event">
-            <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly.jpeg" alt="All bags packed with trackers visibly displayed, ready for transport to Philly">
+            <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2024-spring_msft-mvpsummit/2024_March_MVPSummit_MSFTCampus_DonationBox.JPG" alt="MACONA donation box at the Microsoft MVP Summit booth, March 2024">
             <div class="journey-event-body">
               <div class="journey-event-meta">
-                <time>Sep 15, 2025</time>
-                <span class="loc">Maryland, USA</span>
+                <time>Mar 12-15, 2024</time>
+                <span class="loc">Redmond, WA</span>
                 <span>Stage 1 &middot; Collecting</span>
               </div>
-              <h3>Bags packed, trackers attached</h3>
-              <p>All bags packed with trackers visibly displayed. Pre-departure inventory shot before the trip to Philadelphia.</p>
-              <div class="gallery-thumbs">
-                <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2025-fall_baltimore-togo/2025_September15_BagsPackedAllMaconaTrkrsDisplayedAboutToGoPhilly2.jpeg" alt="Second view of the packed bags">
-              </div>
+              <h3>Microsoft MVP Summit collection</h3>
+              <p>Multi-day MVP Summit booth at the Microsoft campus. The donation box sat at the table all week while MVPs and Microsoft attendees dropped off clothing and supplies.</p>
             </div>
           </article>
 
           <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_September_17_AtPhillyWareHouseTrakersAll4.jpg" alt="All 4 trackers active inside the Philly warehouse">
+            <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2024-spring_msft-mvpsummit/2024_June_TechCon_Seattle_DonationDropOffAtBooth.JPG" alt="MACONA donation drop-off booth at TechCon Seattle">
             <div class="journey-event-body">
               <div class="journey-event-meta">
-                <time>Sep 17, 2025</time>
-                <span class="loc">Philadelphia, PA warehouse</span>
-                <span>Stage 2 &middot; US port</span>
+                <time>Jun 2024</time>
+                <span class="loc">Seattle, WA</span>
+                <span>Stage 1 &middot; Collecting</span>
               </div>
-              <h3>Arrival at the Philadelphia warehouse</h3>
-              <p>All 4 trackers active inside the Philly warehouse before container loading.</p>
+              <h3>TechCon Seattle collection</h3>
+              <p>The TechCon Seattle booth opened the second collection point. Conference attendees brought clothing and supplies to the MACONA table throughout the week.</p>
             </div>
           </article>
 
           <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_TrackersOnMovePhillyToBaltimore.jpg" alt="Trackers showing the container moving from Philly to Baltimore">
+            <img src="/img/shipments/ship_2024-spring_msft-mvpsummit/2024_May_Trakr-1-ArriveAfricaMap.jpg" alt="Map showing MACONA tracker pinging from the West African coast">
             <div class="journey-event-body">
               <div class="journey-event-meta">
-                <time>Oct 1, 2025</time>
-                <span class="loc">Philly to Baltimore corridor</span>
-                <span>Stage 2 &middot; US port</span>
-              </div>
-              <h3>Container moves Philly to Baltimore</h3>
-              <p>All 4 trackers pinging strong while the container was moved from the Philly warehouse to the Port of Baltimore.</p>
-              <div class="gallery-thumbs">
-                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_All4Trackers.jpg" alt="All 4 trackers pinging strong">
-                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October1_PortOfBaltimore_Trakers2.jpg" alt="Two trackers reported from Port of Baltimore">
-              </div>
-            </div>
-          </article>
-
-          <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October8_2Trackers_LeHarve_France.jpg" alt="2 trackers pinging from Le Havre, France">
-            <div class="journey-event-body">
-              <div class="journey-event-meta">
-                <time>Oct 8, 2025</time>
-                <span class="loc">Le Havre, France</span>
-                <span>Stage 3 &middot; Port ping</span>
-              </div>
-              <h3>First European port stop: Le Havre, France</h3>
-              <p>2 of 4 trackers pinged from Le Havre on Oct 8. By Oct 10, 3 of 4 were showing in the same port.</p>
-              <div class="gallery-thumbs">
-                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October10_3Trackers_LeHavre_France.jpg" alt="3 trackers pinging from Le Havre, France (Oct 10)">
-              </div>
-            </div>
-          </article>
-
-          <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_October20_4Trackers_3714MilesAway.jpg" alt="All 4 trackers reported 3,714 miles from origin, mid-Atlantic">
-            <div class="journey-event-body">
-              <div class="journey-event-meta">
-                <time>Oct 20, 2025</time>
-                <span class="loc">Atlantic crossing</span>
-                <span>Stage 3 &middot; At sea</span>
-              </div>
-              <h3>3,714 miles from origin</h3>
-              <p>Mid-Atlantic distance milestone. All 4 trackers reading 3,714 miles from the US start point.</p>
-            </div>
-          </article>
-
-          <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November11_2Trackers_Lome_Togo_Port.jpg" alt="2 trackers active at Lome port, Togo">
-            <div class="journey-event-body">
-              <div class="journey-event-meta">
-                <time>Nov 11, 2025</time>
-                <span class="loc">Lome, Togo</span>
+                <time>May 24, 2024</time>
+                <span class="loc">West Africa coast</span>
                 <span>Stage 4 &middot; Africa port</span>
               </div>
-              <h3>African landfall: Lome, Togo</h3>
-              <p>First African landfall. 2 trackers showed at Lome port that morning; by the end of the day, 3 of 4 were pinging from the same port.</p>
-              <div class="gallery-thumbs">
-                <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November11_3Trackers_Lome_Togo_Port.jpg" alt="3 trackers active at Lome port, Togo">
-              </div>
+              <h3>Tracker-1 surfaces in West Africa</h3>
+              <p>The first ping from African soil. This was the first time a MACONA shipment carried an active tracker, and the moment it surfaced on the map confirmed every assumption about the route.</p>
             </div>
           </article>
 
           <article class="journey-event">
-            <img src="/img/shipments/ship_2025-fall_baltimore-togo/2025_November_11_1TrakerInFrance_1InMali_1StillInTogo.jpg" alt="Trackers split between France, Mali, and Togo for onward distribution">
+            <img src="/img/shipments/ship_2024-spring_msft-mvpsummit/2024_May_Trakr-1-ArriveAfricaMap_2.jpg" alt="Closer map view of the same tracker arrival ping">
             <div class="journey-event-body">
               <div class="journey-event-meta">
-                <time>Nov 11, 2025</time>
-                <span class="loc">France &middot; Mali &middot; Togo</span>
+                <time>May 24, 2024</time>
+                <span class="loc">West Africa coast</span>
+                <span>Stage 4 &middot; Africa port</span>
+              </div>
+              <h3>Second tracker view, zoomed</h3>
+              <p>A closer view of the same arrival ping.</p>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2024-spring_msft-mvpsummit/2024_June6_AllMaconaAfricaVolunteerInMaconaShirtsInFrontOrphanage.jpeg" alt="MACONA volunteers in branded shirts lined up in front of the orphanage">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Jun 6, 2024</time>
+                <span class="loc">Orphanage, West Africa</span>
                 <span>Stage 5 &middot; Distribution</span>
               </div>
-              <h3>Trackers split for onward distribution</h3>
-              <p>Same day, trackers split paths. 1 reading from France (likely a returning traveler), 1 in Mali, 1 still in Togo. Container contents distributed across multiple endpoints.</p>
+              <h3>Volunteers arrive at the orphanage</h3>
+              <p>The full MACONA volunteer team on the ground, in branded shirts, lined up in front of the orphanage receiving the shipment.</p>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2024-spring_msft-mvpsummit/2024_June_Volunteers_InShirt_Banner_Africa.JPG" alt="Volunteers holding MACONA banner at the orphanage">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Jun 10, 2024</time>
+                <span class="loc">Orphanage, West Africa</span>
+                <span>Stage 5 &middot; Distribution</span>
+              </div>
+              <h3>Banner photo at the orphanage</h3>
+              <p>Volunteers with the MACONA banner at the orphanage. Same trip as the June 6 group photo.</p>
+            </div>
+          </article>
+
+          <article class="journey-event">
+            <img src="/img/shipments/ship_2024-spring_msft-mvpsummit/2024_June6_AllMaconaAfricaVolunteerInMaconaShirtsInFrontOrphanage.jpeg" alt="MACONA volunteers in MACONA shirts in front of the orphanage during a food handout" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:0 auto;">
+            <div class="journey-event-body">
+              <div class="journey-event-meta">
+                <time>Jun 10, 2024</time>
+                <span class="loc">Orphanage, West Africa</span>
+                <span>Stage 5 &middot; Distribution</span>
+              </div>
+              <h3>Handing food to the children (video)</h3>
+              <p>Volunteer handing food directly to the children at the orphanage. The reason every conference booth, every bag, and every tracker exists.</p>
             </div>
           </article>
 
@@ -288,7 +275,7 @@
       <div class="container">
         <span class="section-label">Stay With Future Shipments</span>
         <h2>Get notified when the next one ships</h2>
-        <p>This one is delivered. The next container is already filling. Subscribe to know when it leaves, where the trackers ping, and when distribution lands.</p>
+        <p>This one is delivered, but the next container is already filling. Subscribe to know when it leaves, where the trackers ping, and when distribution lands.</p>
 
         <div class="subscribe-card">
           <h3>Subscribe to MACONA shipments</h3>
@@ -310,7 +297,7 @@
               <label for="website">Leave this empty</label>
               <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
-            <input type="hidden" name="shipmentSlug" value="ship_2025-fall_baltimore-togo">
+            <input type="hidden" name="shipmentSlug" value="ship_2024-spring_msft-mvpsummit">
             <button type="submit" class="subscribe-btn">Subscribe</button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
