@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivered: The Spring 2026 Shipment Reaches the Children in Bamako - MACONA</title>
+  <meta name="description" content="On September 18, 2026 MACONA's Spring 2026 shipment completed its journey from Maryland to Mali. Every bag was handed to the director of the ONG Dembagnouma Djoyoro Orphelinat in Bamako, in front of the children. Photographs and unedited video of the full distribution.">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Delivered: The Spring 2026 Shipment Reaches the Children in Bamako">
+  <meta property="og:description" content="On September 18, 2026 MACONA's Spring 2026 shipment completed its journey from Maryland to Mali. Every bag was handed to the director of the ONG Dembagnouma Djoyoro Orphelinat in Bamako, in front of the children. Photographs and unedited video of the full distribution.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://macona.org/blog/2026-09-18-spring-shipment-delivered-bamako/">
+  <meta property="og:image" content="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-group-wide-with-goods.jpg">
+  <meta property="article:published_time" content="2026-09-18T00:00:00Z">
+  <meta property="article:author" content="MACONA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Delivered: The Spring 2026 Shipment Reaches the Children in Bamako">
+  <meta name="twitter:description" content="On September 18, 2026 MACONA's Spring 2026 shipment completed its journey from Maryland to Mali. Every bag was handed to the director of the ONG Dembagnouma Djoyoro Orphelinat in Bamako, in front of the children. Photographs and unedited video of the full distribution.">
+  <meta name="twitter:image" content="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-group-wide-with-goods.jpg">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/lightbox.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f5f5f0;
+      --text: #1a1a2e;
+      --text-muted: #5a5a7a;
+      --accent: #2d6a4f;
+      --accent-glow: rgba(45,106,79,0.12);
+      --accent2: #d4a373;
+      --border: #e5e5e0;
+      --max-w: 1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Nav ---- */
+    .nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ---- Article Layout ---- */
+    .back-link {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .back-link a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .back-link a:hover {
+      color: var(--accent);
+    }
+
+    .article-header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    .article-header .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-header .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .article-body strong {
+      font-weight: 600;
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* ---- Table ---- */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .article-body th,
+    .article-body td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body th {
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-bottom: 2px solid var(--border);
+    }
+    .article-body td {
+      color: var(--text);
+    }
+    .article-body tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    /* ---- CTA Button ---- */
+    .cta-button {
+      display: inline-block;
+      background: #0f766e;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #0d6960;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    /* ---- Donation Tiers ---- */
+    .donation-tiers {
+      background: var(--accent-glow);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+    .donation-tiers h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .article-body table { font-size: 0.85rem; }
+      .article-body th, .article-body td { padding: 0.5rem 0.6rem; }
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+  <link rel="stylesheet" href="/css/tts.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/img/logo/macona-logo.png" alt="MACONA logo">
+        MACONA
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Back Link -->
+  <div class="back-link">
+    <a href="/blog/">&larr; Back to Blog</a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="date">September 18, 2026</div>
+    <h1>Delivered: The Spring 2026 Shipment Reaches the Children in Bamako</h1>
+    <p class="subtitle">The Spring 2026 shipment left Maryland on May 4 and was handed to the director of an orphanage in Bamako, Mali today, in front of the children. Here is every photograph and every video from the distribution.</p>
+  </header>
+
+  <!-- Hero Image -->
+  <div style="max-width:720px; margin:0 auto; padding:0 1.5rem;">
+    <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-group-wide-with-goods.jpg" alt="Children and staff of the ONG Dembagnouma Djoyoro Orphelinat gathered behind the delivered bags of clothing, food, and supplies in Bamako, Mali, with the MACONA banner held overhead" style="width:100%; max-width:720px; display:block; margin:0 auto 2rem; border-radius:8px; border:1px solid var(--border);">
+  </div>
+
+  <!-- Article Body -->
+  <!-- Live tracker banner -->
+  <div style="max-width:720px; margin:0 auto 2rem; padding:1rem 1.5rem; background:#e8f3ed; border:1px solid #2d6a4f; border-radius:8px; text-align:center;">
+    <p style="margin:0; font-size:0.95rem;"><strong>Shipment delivered and closed:</strong> <a href="/shipments/ship_2026-05_philly-mali/" style="color:#2d6a4f; font-weight:600;">Follow the complete tracked route from Maryland to Bamako &rarr;</a></p>
+  </div>
+
+  <article class="article-body">
+
+    <h2>The end of the line</h2>
+    <p>On May 4, 2026, five bags of clothing, hygiene products, and over the counter medicine were packed in a driveway in Maryland. Four of them carried Apple AirTags. The next day they were driven two hours to a container yard in Philadelphia and sealed into a container bound for West Africa.</p>
+    <p>Today those bags were opened in front of the children they were packed for.</p>
+    <p>The shipment was delivered to the <strong>ONG Dembagnouma Djoyoro Orphelinat</strong> on Rue 212, Porte 508 in Bamako, Mali. Our volunteers carried every bag in and handed them to the director in front of the whole house: clothing for boys and girls, cooking oil, pasta, rice, powdered milk, and hygiene supplies. The banner in these photographs says the same thing in French and in English. Build a world where all youth are cared for, safe, and never go to bed hungry. Today that sentence has an address.</p>
+
+    <h2>Four months, 4,548 miles, four trackers</h2>
+    <p>This is the shipment you were able to watch the entire way. The trackers reported from the Philadelphia warehouse before the container was sealed, went quiet across the Atlantic, surfaced again in the Port of Dakar in Senegal on July 17, moved down the N1 highway at M'Bour on July 23, crossed into Mali at Kenieba on August 1, and reached Bamako on August 5 with all four trackers reporting 4,548 miles from home. On August 8 the volunteers took possession and began sorting. Today they finished the job.</p>
+    <p>Nothing about that route was promised in advance. It was published as it happened, including the weeks when the trackers said nothing at all. That is the point of tracking a shipment in public.</p>
+
+    <h2>What the delivery looked like</h2>
+  <div style="max-width:720px;margin:2rem auto;padding:0 1.5rem;">
+    <div class="lightbox-enabled" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:0.6rem;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-group-wide-with-goods.jpg" alt="Children and staff of the ONG Dembagnouma Djoyoro Orphelinat gathered behind the delivered bags of clothing, food, and supplies in Bamako, Mali, with the MACONA banner held overhead" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-handover-to-director-03.jpg" alt="A MACONA volunteer hands a sealed bag of supplies to the director of the orphanage while the children watch" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-handover-to-director-01.jpg" alt="The handover of a bag of hygiene supplies to the orphanage director in front of the MACONA banner" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-handover-to-director-04.jpg" alt="Children clapping as a bag of supplies is passed to the orphanage director in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-handover-to-director-02.jpg" alt="A bag of donated supplies changing hands at the orphanage in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-wide.jpg" alt="A sack of MIXWELL powdered milk handed over at the orphanage, with dozens of children behind and bottles of cooking oil in the foreground" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-01.jpg" alt="Two men hold a sack of powdered milk in front of the painted orphanage sign on Rue 212, Porte 508 in Bamako" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-02.jpg" alt="Powdered milk and cooking oil delivered to the orphanage in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-03.jpg" alt="A sack of MIXWELL powdered milk presented at the orphanage in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-04.jpg" alt="The powdered milk handover at the ONG Dembagnouma Djoyoro Orphelinat in Bamako" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-05.jpg" alt="Children gathered around as powdered milk and cooking oil are handed over in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-milk-handover-06.jpg" alt="Food staples from the shipment presented outside the orphanage in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-banner-with-supplies-01.jpg" alt="Two volunteers hold the MACONA banner behind bags of clothing, bottles of cooking oil, pasta, and powdered milk" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-banner-with-supplies-02.jpg" alt="The MACONA banner held above the delivered bags of clothing and food at the orphanage" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-banner-with-supplies-03.jpg" alt="The full MACONA banner reading Together we can, held behind the delivered supplies in Bamako" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+      <img src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-banner-with-supplies-04.jpg" alt="Bags of sorted clothing stacked beside cooking oil and powdered milk at the orphanage in Bamako, Mali" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);cursor:zoom-in;display:block;">
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">Every photograph from the distribution. Click any image to view it full size.</p>
+  </div>
+
+    <h2>Watch it happen</h2>
+    <p>We are publishing the video unedited. A receipt is easy to write. A face is not.</p>
+
+    <h3>The handover</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-handover-clip.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-handover-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>The moment the supplies pass from our volunteer to the director of the orphanage, with the children gathered behind.</p>
+
+    <h3>Mimi calls in from the United States</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-video-call-home.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-video-call-home.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Mariam Williams, who founded MACONA, joined the handover by video call and spoke directly with the director while the room crowded around the phone.</p>
+
+    <h3>The director, in her own words</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-director-interview.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-director-interview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Three and a half minutes, unedited, recorded on the spot. The director of the orphanage describes what arrived and what it changes.</p>
+
+    <h3>The children, in their own words</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-children-interview.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-children-interview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>The children speak for themselves about what the shipment means to them.</p>
+
+    <h3>A slow pan across everything delivered</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-goods-and-children-pan.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-goods-and-children-pan.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>The full inventory on the ground, and the children it was packed for.</p>
+
+    <h3>Beside the bags</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-bags-and-children.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-bags-and-children.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>The sorted bags staged outside the orphanage as the children wait.</p>
+
+    <h3>At the orphanage sign</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-children-at-sign.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-children-at-sign.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Outside the ONG Dembagnouma Djoyoro Orphelinat on Rue 212.</p>
+
+    <h3>Under the banner</h3>
+    <video controls preload="metadata" poster="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/poster-children-banner-clip.jpg" style="width:100%;max-width:720px;display:block;margin:0.75rem auto 0.5rem;border-radius:8px;border:1px solid var(--border);background:#000;">
+      <source src="https://adotobmedia.blob.core.windows.net/macona-media/img/shipments/ship_2026-05_philly-mali/distribution/bamako-orphanage-children-banner-clip.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Build a world where all youth are cared for, safe, and never go to bed hungry.</p>
+
+    <h2>One orphanage, in full</h2>
+    <p>Everything raised for this shipment went to this one house, and it arrived complete. That is what the Spring 2026 fundraising carried, and it carried it all the way. The next container is what adds the next address, and the dollars given between now and then are what decide how many children are standing in the next set of photographs.</p>
+    <p>In kind donations fill the bags. Dollar donations move them across an ocean, clear customs, and put them into a child's hands 4,548 miles away.</p>
+
+    <p style="text-align:center;margin:2rem 0;">
+      <a href="/shipments/ship_2026-05_philly-mali/" style="color:#2d6a4f;font-weight:600;">See the complete tracked route, start to finish &rarr;</a>
+    </p>
+
+    <h3>Get involved</h3>
+    <p>Your gift keeps the pipeline full. You can give through <a href="https://go.macona.org/donate">MACONA's donation page</a>, and if your employer offers matching gifts you may be able to double it through Benevity. Our promise to you stays the same: honest updates on where your donation is and what it delivered, all the way to Mali.</p>
+
+    <!-- Mid-Article CTA -->
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now</a>
+    </p>
+
+    <!-- Donation Tiers -->
+    <div class="donation-tiers">
+      <h3>Your Gift at Work</h3>
+      <ul>
+        <li><a href="https://go.macona.org/donate-25"><strong>$25</strong></a> &mdash; packs 5 family food bags</li>
+        <li><a href="https://go.macona.org/donate-50"><strong>$50</strong></a> &mdash; funds 10 infant nutrition kits</li>
+        <li><a href="https://go.macona.org/donate-100"><strong>$100</strong></a> &mdash; deploys one hydration hub at a school</li>
+        <li><a href="https://go.macona.org/donate-250"><strong>$250</strong></a> &mdash; sponsors an entire distribution day</li>
+      </ul>
+    </div>
+
+    <!-- Benevity Matching Gift -->
+    <h3>Double Your Impact</h3>
+    <p>If your employer offers matching gifts, search for <strong>MIMI AFRICAN CHARITIES</strong> (EIN 93-3813688) in Benevity. Corporate matches have funded hydration hubs, school supplies, and full distribution days.</p>
+
+    <!-- End CTA -->
+    <p style="text-align: center; margin: 2rem 0;">
+      <a href="https://go.macona.org/donate" class="cta-button">Donate Now</a>
+    </p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/programs/">Programs</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 MACONA. All rights reserved. 501(c)(3) Nonprofit Organization.</p>
+    </div>
+  </footer>
+
+  <script src="/js/lightbox.js"></script>
+  <script src="/js/tts.js"></script>
+</body>
+</html>
